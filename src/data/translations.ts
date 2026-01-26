@@ -14,7 +14,7 @@ export const translations: Translations = {
     },
     mission: {
       title: 'Vår Misjon',
-      content: 'Oslo har lenge vært dominert av det samme, trygge lydbilde. Vi er her for å endre det. Frekvens bringer de hardeste sjangrene til byen. UKG, Tecgno, Schranz, Hardgroove og alt som får gulvet til å riste.',
+      content: 'Oslo har lenge vært dominert av det samme, trygge lydbilde. Vi er her for å endre det. Frekvens bringer de hardeste sjangrene til byen. UKG, Techno, Hard Techno, Schranz, Hardgroove og alt som får gulvet til å riste. Vi er ikke her for å spille de samme låtene om igjen. Våre DJs deler ukjente bangers og får deg til å danse til lyder du ikke visste du trengte.',
     },
     people: {
       title: 'Folket',
@@ -46,7 +46,7 @@ export const translations: Translations = {
     },
     mission: {
       title: 'Our Mission',
-      content: 'Oslo has long been dominated by the same safe soundscape. We\'re here to change that. Frekvens brings the hardest genres to the city. UKG, Tecgno, Schranz, Hardgroove and everything that makes the floor shake.',
+      content: 'Oslo has long been dominated by the same safe soundscape. We\'re here to change that. Frekvens brings the hardest genres to the city. UKG, Techno, Hard Techno, Schranz, Hardgroove and everything that makes the floor shake. We\'re not here to play the same tracks on repeat. Our DJs share hidden gems and get you dancing to sounds you didn\'t know you needed.',
     },
     people: {
       title: 'The People',

@@ -37,7 +37,7 @@
   },
   {
     "id": "vela",
-    "name": "Christian Velasques",
+    "name": "Christian Velasquez",
     "role": {
       "no": "Markedsføringsansvarlig",
       "en": "Head of Marketing"
@@ -51,12 +51,24 @@
     "id": "nick",
     "name": "Nicholas Selvig",
     "role": {
-      "no": "Ambassdør",
+      "no": "Ambassadør",
       "en": "Ambassador"
     },
     "imageUrl": "",
     "links": {
       "email": "Nicholas.selvig@gmail.com"
+    }
+  },
+  {
+    "id": "oliver",
+    "name": "Oliver Ludvigsen",
+    "role": {
+      "no": "Ambassadør",
+      "en": "Ambassador"
+    },
+    "imageUrl": "",
+    "links": {
+      "email": ""
     }
   }
 ]

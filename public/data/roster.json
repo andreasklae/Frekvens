@@ -42,20 +42,6 @@
     }
   },
   {
-    "id": "red-light",
-    "alias": "Red light",
-    "name": "Ludvig",
-    "role": {
-      "no": "DJ",
-      "en": "DJ"
-    },
-    "imageUrl": "/images/roster/red-light.jpg",
-    "countryCode": "NO",
-    "links": {
-      "instagram": "https://instagram.com/red_light_dj"
-    }
-  },
-  {
     "id": "blessing",
     "alias": "BLE$$ING",
     "name": "Michelle",

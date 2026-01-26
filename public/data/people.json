@@ -1,0 +1,62 @@
+[
+  {
+    "id": "andreas",
+    "name": "Andreas Klæboe",
+    "role": {
+      "no": "Stifter, Event manager",
+      "en": "Founder, Event Manager"
+    },
+    "imageUrl": "/images/people/andreas.jpg",
+    "links": {
+      "email": "andreas@frekvenscollective.com"
+    }
+  },
+  {
+    "id": "sindre",
+    "name": "Sindre Veum",
+    "role": {
+      "no": "Med-stifter, Kreativ leder",
+      "en": "Co-founder, Creative Director"
+    },
+    "imageUrl": "/images/people/sindre.jpeg",
+    "links": {
+      "email": "sindre@frekvenscollective.com"
+    }
+  },
+  {
+    "id": "michelle",
+    "name": "Michelle Ogunde",
+    "role": {
+      "no": "Med-stifter, Booking ansvarlig",
+      "en": "Co-founder, Booking Manager"
+    },
+    "imageUrl": "",
+    "links": {
+      "email": "michelle@frekvenscollective.com"
+    }
+  },
+  {
+    "id": "vela",
+    "name": "Christian Velasques",
+    "role": {
+      "no": "Markedsføringsansvarlig",
+      "en": "Head of Marketing"
+    },
+    "imageUrl": "",
+    "links": {
+      "email": "c.lindaas4@icloud.com"
+    }
+  },
+  {
+    "id": "nick",
+    "name": "Nicholas Selvig",
+    "role": {
+      "no": "Ambassdør",
+      "en": "Ambassador"
+    },
+    "imageUrl": "",
+    "links": {
+      "email": "Nicholas.selvig@gmail.com"
+    }
+  }
+]

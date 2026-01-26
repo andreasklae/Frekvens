@@ -1,0 +1,128 @@
+[
+  {
+    "id": "nzl",
+    "alias": "NZL",
+    "name": "Nikita",
+    "role": {
+      "no": "DJ",
+      "en": "DJ"
+    },
+    "imageUrl": "/images/roster/nzl.jpg",
+    "countryCode": "SK",
+    "links": {
+      "tiktok": "https://tiktok.com/@djnzl"
+    }
+  },
+  {
+    "id": "thomas-le",
+    "alias": "Thomas Le",
+    "name": "Thomas",
+    "role": {
+      "no": "DJ",
+      "en": "DJ"
+    },
+    "imageUrl": "/images/roster/thomas-le.jpg",
+    "countryCode": "NO",
+    "links": {
+      "instagram": "https://instagram.com/milo.romano00"
+    }
+  },
+  {
+    "id": "zento",
+    "alias": "Zento",
+    "name": "Ola B Bjørkenes",
+    "role": {
+      "no": "DJ",
+      "en": "DJ"
+    },
+    "imageUrl": "/images/roster/zento.jpg",
+    "countryCode": "NO",
+    "links": {
+      "instagram": "https://instagram.com/zento.mp3"
+    }
+  },
+  {
+    "id": "red-light",
+    "alias": "Red light",
+    "name": "Ludvig",
+    "role": {
+      "no": "DJ",
+      "en": "DJ"
+    },
+    "imageUrl": "/images/roster/red-light.jpg",
+    "countryCode": "NO",
+    "links": {
+      "instagram": "https://instagram.com/red_light_dj"
+    }
+  },
+  {
+    "id": "blessing",
+    "alias": "BLE$$ING",
+    "name": "Michelle",
+    "role": {
+      "no": "DJ",
+      "en": "DJ"
+    },
+    "imageUrl": "/images/roster/blessing.jpg",
+    "countryCode": "NO",
+    "links": {
+      "instagram": "https://instagram.com/michelle.ogunde"
+    }
+  },
+  {
+    "id": "harrison-turner",
+    "alias": "Harrison Turner",
+    "name": "Harrison Turner",
+    "role": {
+      "no": "DJ",
+      "en": "DJ"
+    },
+    "imageUrl": "/images/roster/harrison-turner.jpg",
+    "countryCode": "GB",
+    "links": {
+      "instagram": "https://www.instagram.com/hlturner7/"
+    }
+  },
+  {
+    "id": "dillon-young",
+    "alias": "Dillon Young",
+    "name": "Dillon Young",
+    "role": {
+      "no": "DJ",
+      "en": "DJ"
+    },
+    "imageUrl": "/images/roster/dillon-young.jpg",
+    "countryCode": "GB",
+    "links": {
+      "instagram": "https://www.instagram.com/dillonyoung__/"
+    }
+  },
+  {
+    "id": "arttu-kallio",
+    "alias": "Arttu Kallio",
+    "name": "Arttu Kallio",
+    "role": {
+      "no": "DJ",
+      "en": "DJ"
+    },
+    "imageUrl": "/images/roster/arttu-kallio.jpg",
+    "countryCode": "FI",
+    "links": {
+      "instagram": "https://www.instagram.com/arttukallio/"
+    }
+  },
+  {
+    "id": "amelie-hauke",
+    "alias": "Amelie Hauke",
+    "name": "Amelie Hauke",
+    "role": {
+      "no": "DJ",
+      "en": "DJ"
+    },
+    "imageUrl": "/images/roster/amelie-hauke.jpg",
+    "countryCode": "DE",
+    "links": {
+      "instagram": "https://www.instagram.com/ameliehauke/"
+    }
+  }
+]

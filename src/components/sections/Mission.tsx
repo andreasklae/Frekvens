@@ -6,10 +6,13 @@ export function Mission() {
 
   return (
     <section id="mission" className="py-24 sm:py-32 bg-transparent relative overflow-hidden min-h-[600px]">
-      {/* Background GIF */}
-      <img
-        src="/videos/mission-background.gif"
-        alt=""
+      {/* Background Video */}
+      <video
+        src="/videos/mission-background.mp4"
+        autoPlay
+        loop
+        muted
+        playsInline
         className="absolute inset-0 w-full h-full object-cover z-0"
         style={{ minHeight: '100%', minWidth: '100%' }}
       />

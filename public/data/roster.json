@@ -84,17 +84,17 @@
     }
   },
   {
-    "id": "arttu-kallio",
-    "alias": "Arttu Kallio",
-    "name": "Arttu Kallio",
+    "id": "r2-diego",
+    "alias": "r2 & Diego",
+    "name": "r2 & Diego",
     "role": {
       "no": "DJ",
       "en": "DJ"
     },
-    "imageUrl": "/images/roster/arttu-kallio.jpg",
+    "imageUrl": "/images/roster/r2-diego.jpg",
     "countryCode": "FI",
     "links": {
-      "instagram": "https://www.instagram.com/arttukallio/"
+      "instagram": "https://www.instagram.com/chupaxoxota.club/"
     }
   },
   {

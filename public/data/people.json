@@ -58,17 +58,5 @@
     "links": {
       "email": "Nicholas.selvig@gmail.com"
     }
-  },
-  {
-    "id": "oliver",
-    "name": "Oliver Ludvigsen",
-    "role": {
-      "no": "Ambassadør",
-      "en": "Ambassador"
-    },
-    "imageUrl": "",
-    "links": {
-      "email": "oliverludvigsen4@gmail.com"
-    }
   }
 ]

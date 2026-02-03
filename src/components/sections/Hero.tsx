@@ -55,12 +55,12 @@ export function Hero() {
       </div>
 
       {/* Logo - always vertically centered */}
-      <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 w-full max-w-[100vw] px-4 overflow-hidden">
+      <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 w-full px-4">
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: 'easeOut' }}
-          className="font-lastica text-[10vw] sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl 2xl:text-[10rem] text-white glow-text tracking-normal sm:tracking-wide md:tracking-wider whitespace-nowrap text-center w-full"
+          className="font-lastica text-[clamp(2rem,10.8vw,6rem)] sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl 2xl:text-[10rem] text-white glow-text tracking-normal sm:tracking-wide md:tracking-wider whitespace-nowrap text-center w-full overflow-hidden text-ellipsis"
         >
           FREKVENS
         </motion.h1>

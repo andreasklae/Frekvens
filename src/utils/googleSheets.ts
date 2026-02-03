@@ -155,7 +155,7 @@ export async function fetchRosterFromGoogleSheets(): Promise<Person[]> {
       const links = parseSocialLinks(socials);
       
       // Extract image URL from Bilde column
-      const imageUrl = extractImageUrlFromBilde(imageInfo, id);
+      const imageUrl = extractImageUrlFromBilde(imageInfo);
       
       // Check if links object has any properties
       const hasLinks = links && Object.keys(links).length > 0;
@@ -301,7 +301,7 @@ function parseSocialLinks(socials: string): Person['links'] {
  * - Google Drive shareable links (converts to direct image URL)
  * - Falls back to local image path if no URL found
  */
-function extractImageUrlFromBilde(bilde: string, id: string): string | null {
+function extractImageUrlFromBilde(bilde: string): string | null {
   if (!bilde) {
     // No image provided
     return null;

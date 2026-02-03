@@ -36,8 +36,8 @@ export function PersonCard({ person }: PersonCardProps) {
           {showImage ? (
             <>
               {!imageLoaded && (
-                <div className="w-32 h-32 rounded-full bg-dark-700 border-2 border-dark-600 transition-colors duration-300 flex items-center justify-center absolute">
-                  <User className="w-16 h-16 text-dark-600" />
+                <div className="w-20 h-20 sm:w-32 sm:h-32 rounded-full bg-dark-700 border-2 border-dark-600 transition-colors duration-300 flex items-center justify-center absolute">
+                  <User className="w-10 h-10 sm:w-16 sm:h-16 text-dark-600" />
                 </div>
               )}
               <img
@@ -45,28 +45,28 @@ export function PersonCard({ person }: PersonCardProps) {
                 alt={person.alias || person.name || 'Person'}
                 onError={handleImageError}
                 onLoad={handleImageLoad}
-                className={`w-32 h-32 rounded-full object-cover border-2 border-dark-600 transition-colors duration-300 ${
+                className={`w-20 h-20 sm:w-32 sm:h-32 rounded-full object-cover border-2 border-dark-600 transition-colors duration-300 ${
                   imageLoaded ? 'opacity-100' : 'opacity-0 absolute'
                 }`}
               />
             </>
           ) : (
-            <div className="w-32 h-32 rounded-full bg-dark-700 border-2 border-dark-600 transition-colors duration-300 flex items-center justify-center">
-              <User className="w-16 h-16 text-dark-600" />
+            <div className="w-20 h-20 sm:w-32 sm:h-32 rounded-full bg-dark-700 border-2 border-dark-600 transition-colors duration-300 flex items-center justify-center">
+              <User className="w-10 h-10 sm:w-16 sm:h-16 text-dark-600" />
             </div>
           )}
         </div>
 
         {/* Role */}
-        <p className="text-primary font-medium mb-1">
+        <p className="text-primary text-sm sm:text-base font-medium mb-1">
           {person.role[language]}
         </p>
 
         {/* Alias or Name with Country Code */}
-        <h3 className="text-xl font-bold text-white mb-1">
+        <h3 className="text-base sm:text-xl font-bold text-white mb-1">
           {person.alias || person.name}
           {person.countryCode && (
-            <span className="text-gray-500 text-xl ml-2 uppercase font-normal">
+            <span className="text-gray-500 text-base sm:text-xl ml-2 uppercase font-normal">
               ({person.countryCode})
             </span>
           )}
@@ -74,7 +74,7 @@ export function PersonCard({ person }: PersonCardProps) {
 
         {/* Description */}
         {person.description && (
-          <p className="text-gray-400 text-sm mb-2">
+          <p className="text-gray-400 text-xs sm:text-sm mb-2">
             {person.description[language]}
           </p>
         )}
@@ -83,7 +83,7 @@ export function PersonCard({ person }: PersonCardProps) {
         {person.links?.email && (
           <a
             href={`mailto:${person.links.email}`}
-            className="text-gray-400 hover:text-primary transition-colors duration-200 text-sm mb-2"
+            className="text-gray-400 hover:text-primary transition-colors duration-200 text-xs sm:text-sm mb-2"
           >
             {person.links.email}
           </a>
@@ -91,28 +91,28 @@ export function PersonCard({ person }: PersonCardProps) {
 
         {/* Social Links */}
         {person.links && (
-          <div className="flex gap-3 mt-2 justify-center">
+          <div className="flex gap-2 sm:gap-3 mt-2 justify-center">
             {person.links.instagram && (
               <a
-                href={person.links.instagram.startsWith('http') ? person.links.instagram : `https://instagram.com/${person.links.instagram.replace('@', '')}`}
+                href={person.links.instagram.startsWith('http') ? person.links.instagram : `https://instagram.com/${person.links.instagram.replace(/^@/, '')}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-500 hover:text-primary transition-colors duration-200"
                 aria-label="Instagram"
               >
-                <Instagram className="w-5 h-5" />
+                <Instagram className="w-4 h-4 sm:w-5 sm:h-5" />
               </a>
             )}
             {person.links.tiktok && (
               <a
-                href={person.links.tiktok.startsWith('http') ? person.links.tiktok : `https://tiktok.com/@${person.links.tiktok.replace('@', '')}`}
+                href={person.links.tiktok.startsWith('http') ? person.links.tiktok : `https://tiktok.com/@${person.links.tiktok.replace(/^@/, '')}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-500 hover:text-primary transition-colors duration-200"
                 aria-label="TikTok"
               >
                 <svg
-                  className="w-5 h-5"
+                  className="w-4 h-4 sm:w-5 sm:h-5"
                   viewBox="0 0 24 24"
                   fill="currentColor"
                   xmlns="http://www.w3.org/2000/svg"
@@ -129,7 +129,7 @@ export function PersonCard({ person }: PersonCardProps) {
                 className="text-gray-500 hover:text-primary transition-colors duration-200"
                 aria-label="SoundCloud"
               >
-                <Music className="w-5 h-5" />
+                <Music className="w-4 h-4 sm:w-5 sm:h-5" />
               </a>
             )}
             {person.links.residentAdvisor && (
@@ -141,7 +141,7 @@ export function PersonCard({ person }: PersonCardProps) {
                 aria-label="Resident Advisor"
               >
                 <svg
-                  className="w-5 h-5"
+                  className="w-4 h-4 sm:w-5 sm:h-5"
                   viewBox="0 0 83 40"
                   fill="currentColor"
                   xmlns="http://www.w3.org/2000/svg"

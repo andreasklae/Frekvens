@@ -30,7 +30,7 @@ export function Roster() {
         {loading ? (
           <div className="text-center text-gray-400">Loading...</div>
         ) : (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8">
             {roster.map((artist) => (
               <PersonCard key={artist.id} person={artist} />
             ))}

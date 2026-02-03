@@ -4,7 +4,6 @@
 
 Place photos in:
 - `public/images/people/` - Photos for team members
-- `public/images/roster/` - Photos for artists/DJs
 
 ## JSON Files
 
@@ -20,8 +19,13 @@ Contains the data for "The People" section. Each entry should have:
   - `soundcloud`: SoundCloud URL
   - `residentAdvisor`: Resident Advisor URL
 
-### roster.json
-Same structure as people.json, but for artists/DJs in the roster section.
+## Roster Data
+
+Roster data is now fetched from Google Sheets. The roster is automatically populated from:
+- Google Sheet: `1kwEoFWriKDDUtYmXiQ9L29g6kF4D48xkNzuXCk1gtxg`
+- Images are stored in Google Drive and linked in the "Bilde" column
+- Social links are in the "Socials" column
+- Only rows with status "Er med" are included
 
 ## Image Handling
 

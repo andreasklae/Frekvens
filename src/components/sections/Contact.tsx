@@ -31,7 +31,7 @@ export function Contact() {
       ),
       label: 'Resident Advisor',
       href: 'https://ra.co/promoters/173955',
-      display: 'Resident Advisor',
+      display: 'Frekvens',
     },
   ];
 

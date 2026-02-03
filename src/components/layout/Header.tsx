@@ -45,7 +45,7 @@ export function Header() {
           {/* Logo */}
           <a
             href="#"
-            className="font-lastica text-xl sm:text-2xl text-white hover:glow-text-subtle transition-all duration-300"
+            className="font-lastica text-lg sm:text-xl lg:text-2xl text-white hover:glow-text-subtle transition-all duration-300 whitespace-nowrap flex-shrink-0"
             onClick={(e) => {
               e.preventDefault();
               window.scrollTo({ top: 0, behavior: 'smooth' });

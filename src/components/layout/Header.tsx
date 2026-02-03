@@ -40,12 +40,12 @@ export function Header() {
           : 'bg-transparent'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 sm:h-20">
+      <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-16 sm:h-20 gap-2 sm:gap-4">
           {/* Logo */}
           <a
             href="#"
-            className="font-lastica text-lg sm:text-xl lg:text-2xl text-white hover:glow-text-subtle transition-all duration-300 whitespace-nowrap flex-shrink-0"
+            className="font-lastica text-[5vw] xs:text-base sm:text-lg md:text-xl lg:text-2xl text-white hover:glow-text-subtle transition-all duration-300 whitespace-nowrap flex-shrink-0 max-w-[50vw] sm:max-w-none"
             onClick={(e) => {
               e.preventDefault();
               window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -68,7 +68,7 @@ export function Header() {
           </nav>
 
           {/* Right side */}
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-2 sm:gap-4 flex-shrink-0">
             <LanguageToggle />
 
             {/* Mobile menu button */}

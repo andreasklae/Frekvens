@@ -5,6 +5,7 @@ import { Hero } from './components/sections/Hero';
 import { Mission } from './components/sections/Mission';
 import { People } from './components/sections/People';
 import { Roster } from './components/sections/Roster';
+import { InstagramFeed } from './components/sections/InstagramFeed';
 import { Contact } from './components/sections/Contact';
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
             <Mission />
             <People />
             <Roster />
+            <InstagramFeed />
             <Contact />
           </main>
           <Footer />

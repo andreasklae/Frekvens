@@ -23,11 +23,25 @@ export interface Person {
   };
 }
 
+export interface InstagramPost {
+  id: string;
+  caption?: string;
+  mediaType: string;
+  imageUrl: string;
+  permalink: string;
+  timestamp: string;
+}
+
+export interface InstagramFeedData {
+  posts: InstagramPost[];
+}
+
 export interface TranslationStrings {
   nav: {
     mission: string;
     people: string;
     roster: string;
+    instagram: string;
     contact: string;
   };
   hero: {
@@ -45,6 +59,13 @@ export interface TranslationStrings {
   roster: {
     title: string;
     subtitle: string;
+  };
+  instagram: {
+    title: string;
+    subtitle: string;
+    viewOnInstagram: string;
+    openProfile: string;
+    empty: string;
   };
   contact: {
     title: string;

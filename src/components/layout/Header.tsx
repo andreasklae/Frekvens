@@ -21,6 +21,7 @@ export function Header() {
     { href: '#mission', label: t.nav.mission },
     { href: '#people', label: t.nav.people },
     { href: '#roster', label: t.nav.roster },
+    { href: '#instagram', label: t.nav.instagram },
     { href: '#contact', label: t.nav.contact },
   ];
 

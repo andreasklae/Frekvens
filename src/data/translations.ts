@@ -6,6 +6,7 @@ export const translations: Translations = {
       mission: 'Misjon',
       people: 'Folket',
       roster: 'Artister',
+      instagram: 'Instagram',
       contact: 'Kontakt',
     },
     hero: {
@@ -24,6 +25,13 @@ export const translations: Translations = {
       title: 'VÅR ROSTER',
       subtitle: 'DJs og produsenter vi representerer',
     },
+    instagram: {
+      title: 'SISTE FRA INSTAGRAM',
+      subtitle: '@frekvenscollective',
+      viewOnInstagram: 'Se på Instagram',
+      openProfile: 'Følg @frekvenscollective',
+      empty: 'Innlegg vises her når de er synkronisert. Følg oss på Instagram under.',
+    },
     contact: {
       title: 'KONTAKT',
       email: 'Send oss en mail',
@@ -38,6 +46,7 @@ export const translations: Translations = {
       mission: 'Mission',
       people: 'The People',
       roster: 'Our Roster',
+      instagram: 'Instagram',
       contact: 'Contact',
     },
     hero: {
@@ -55,6 +64,13 @@ export const translations: Translations = {
     roster: {
       title: 'OUR ROSTER',
       subtitle: 'DJs and producers we represent',
+    },
+    instagram: {
+      title: 'LATEST ON INSTAGRAM',
+      subtitle: '@frekvenscollective',
+      viewOnInstagram: 'View on Instagram',
+      openProfile: 'Follow @frekvenscollective',
+      empty: 'Posts will appear here once synced. Follow us on Instagram below.',
     },
     contact: {
       title: 'CONTACT',

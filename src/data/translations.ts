@@ -3,10 +3,8 @@ import type { Translations } from '../types';
 export const translations: Translations = {
   no: {
     nav: {
-      mission: 'Misjon',
       people: 'Folket',
-      roster: 'Artister',
-      instagram: 'Instagram',
+      events: 'Arrangementer',
       contact: 'Kontakt',
     },
     hero: {
@@ -30,12 +28,30 @@ export const translations: Translations = {
       subtitle: '@frekvenscollective',
       viewOnInstagram: 'Se på Instagram',
       openProfile: 'Følg @frekvenscollective',
-      empty: 'Innlegg vises her når de er synkronisert. Følg oss på Instagram under.',
     },
     contact: {
       title: 'KONTAKT',
       email: 'Send oss en mail',
       followUs: 'Følg oss',
+    },
+    events: {
+      pageTitle: 'ARRANGEMENTER',
+      upcoming: 'Kommende',
+      past: 'Tidligere',
+      comingSoon: 'Flere arrangementer kommer snart.',
+      pastEmpty: 'Ingen tidligere arrangementer her ennå.',
+      galleryTitle: 'Galleri',
+      galleryGridTitle: 'Alle bilder',
+      galleryThumbnailShowInCarousel: 'Vis i hovedgalleriet',
+      galleryEmpty: 'Ingen flere bilder for dette arrangementet.',
+      watchYoutube: 'Se på YouTube',
+      ticketsRa: 'Billetter på Resident Advisor',
+      notFound: 'Fant ikke dette arrangementet.',
+      back: 'Tilbake til arrangementer',
+      eventPastBadge: 'Tidligere arrangement',
+      homeNextEvent: 'NESTE ARRANGEMENT',
+      homeLastEvent: 'SISTE ARRANGEMENT',
+      homeAllEvents: 'Alle arrangementer',
     },
     language: {
       toggle: 'Språk',
@@ -43,10 +59,8 @@ export const translations: Translations = {
   },
   en: {
     nav: {
-      mission: 'Mission',
       people: 'The People',
-      roster: 'Our Roster',
-      instagram: 'Instagram',
+      events: 'Events',
       contact: 'Contact',
     },
     hero: {
@@ -70,12 +84,30 @@ export const translations: Translations = {
       subtitle: '@frekvenscollective',
       viewOnInstagram: 'View on Instagram',
       openProfile: 'Follow @frekvenscollective',
-      empty: 'Posts will appear here once synced. Follow us on Instagram below.',
     },
     contact: {
       title: 'CONTACT',
       email: 'Send us an email',
       followUs: 'Follow us',
+    },
+    events: {
+      pageTitle: 'EVENTS',
+      upcoming: 'Upcoming',
+      past: 'Past',
+      comingSoon: 'More events coming soon.',
+      pastEmpty: 'No past events here yet.',
+      galleryTitle: 'Gallery',
+      galleryGridTitle: 'All photos',
+      galleryThumbnailShowInCarousel: 'Show in main gallery',
+      galleryEmpty: 'No more photos for this event.',
+      watchYoutube: 'Watch on YouTube',
+      ticketsRa: 'Tickets on Resident Advisor',
+      notFound: 'This event could not be found.',
+      back: 'Back to events',
+      eventPastBadge: 'Past event',
+      homeNextEvent: 'NEXT EVENT',
+      homeLastEvent: 'LAST EVENT',
+      homeAllEvents: 'All events',
     },
     language: {
       toggle: 'Language',

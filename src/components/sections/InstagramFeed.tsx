@@ -1,13 +1,40 @@
 import { motion } from 'framer-motion';
 import { Instagram } from 'lucide-react';
+import { useEffect } from 'react';
 import { useLanguage } from '../../context/LanguageContext';
-import { useInstagramFeed } from '../../hooks/useInstagramFeed';
 
 const PROFILE_URL = 'https://www.instagram.com/frekvenscollective/';
+/** Canonical permalink for embed (query string not needed). */
+const EMBED_POST_URL = 'https://www.instagram.com/p/DWRni5JDHDE/';
+
+function processInstagramEmbeds() {
+  const w = window as Window & { instgrm?: { Embeds: { process: () => void } } };
+  w.instgrm?.Embeds?.process();
+}
 
 export function InstagramFeed() {
   const { t } = useLanguage();
-  const { posts, loading } = useInstagramFeed();
+
+  useEffect(() => {
+    const existing = document.querySelector<HTMLScriptElement>(
+      'script[src="https://www.instagram.com/embed.js"]'
+    );
+
+    if (existing) {
+      processInstagramEmbeds();
+      existing.addEventListener('load', processInstagramEmbeds);
+      return () => existing.removeEventListener('load', processInstagramEmbeds);
+    }
+
+    const script = document.createElement('script');
+    script.src = 'https://www.instagram.com/embed.js';
+    script.async = true;
+    script.onload = processInstagramEmbeds;
+    document.body.appendChild(script);
+    return () => {
+      script.onload = null;
+    };
+  }, []);
 
   return (
     <section id="instagram" className="py-24 sm:py-32 bg-transparent relative overflow-hidden">
@@ -26,77 +53,54 @@ export function InstagramFeed() {
           <div className="w-16 h-1 bg-primary mx-auto mt-6 shadow-glow-sm" />
         </motion.div>
 
-        {loading ? (
-          <div className="text-center text-gray-400">Loading...</div>
-        ) : posts.length === 0 ? (
-          <motion.div
-            initial={{ opacity: 0, y: 16 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center max-w-xl mx-auto"
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="flex justify-center w-full"
+        >
+          <blockquote
+            className="instagram-media"
+            data-instgrm-permalink={EMBED_POST_URL}
+            data-instgrm-version="14"
+            style={{
+              background: '#FFF',
+              border: 0,
+              borderRadius: 12,
+              margin: 0,
+              maxWidth: 540,
+              minWidth: 280,
+              padding: 0,
+              width: '100%',
+            }}
           >
-            <p className="text-gray-500 mb-8">{t.instagram.empty}</p>
             <a
-              href={PROFILE_URL}
+              href={EMBED_POST_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-dark-900 border border-dark-600 hover:border-primary/50 transition-all duration-300 hover:glow-border text-white font-medium"
+              className="block p-4 text-center text-sm text-gray-600 no-underline"
             >
-              <Instagram className="w-5 h-5 text-primary" aria-hidden />
-              {t.instagram.openProfile}
+              {t.instagram.viewOnInstagram}
             </a>
-          </motion.div>
-        ) : (
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4">
-            {posts.map((post, index) => (
-              <motion.a
-                key={post.id}
-                href={post.permalink}
-                target="_blank"
-                rel="noopener noreferrer"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: '-40px' }}
-                transition={{ duration: 0.45, delay: Math.min(index * 0.05, 0.4) }}
-                className="group relative aspect-square overflow-hidden rounded-xl border border-dark-600 bg-dark-900 hover:border-primary/50 transition-all duration-300 hover:glow-border focus:outline-none focus-visible:ring-2 focus-visible:ring-primary"
-                aria-label={t.instagram.viewOnInstagram}
-              >
-                <img
-                  src={post.imageUrl}
-                  alt={post.caption ? post.caption.slice(0, 120) : 'Instagram post'}
-                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                  loading="lazy"
-                  decoding="async"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-3">
-                  <span className="text-xs text-white/90 font-medium flex items-center gap-1">
-                    <Instagram className="w-3.5 h-3.5 text-primary shrink-0" aria-hidden />
-                    {t.instagram.viewOnInstagram}
-                  </span>
-                </div>
-              </motion.a>
-            ))}
-          </div>
-        )}
+          </blockquote>
+        </motion.div>
 
-        {posts.length > 0 && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            className="text-center mt-12"
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          className="text-center mt-12"
+        >
+          <a
+            href={PROFILE_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 text-gray-400 hover:text-primary transition-colors duration-200 text-sm font-medium"
           >
-            <a
-              href={PROFILE_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-gray-400 hover:text-primary transition-colors duration-200 text-sm font-medium"
-            >
-              <Instagram className="w-4 h-4" aria-hidden />
-              {t.instagram.openProfile}
-            </a>
-          </motion.div>
-        )}
+            <Instagram className="w-4 h-4" aria-hidden />
+            {t.instagram.openProfile}
+          </a>
+        </motion.div>
       </div>
     </section>
   );

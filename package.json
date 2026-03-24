@@ -4,20 +4,26 @@
   "version": "0.0.1",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc -b && vite build",
+    "sync-gallery": "node scripts/sync-event-gallery.mjs",
+    "dev": "npm run sync-gallery && vite",
+    "build": "npm run sync-gallery && tsc -b && vite build && cp dist/index.html dist/404.html",
     "lint": "eslint .",
     "preview": "vite preview",
     "fetch-instagram": "node scripts/fetch-instagram-feed.mjs"
   },
   "dependencies": {
+    "@radix-ui/react-aspect-ratio": "^1.1.8",
     "@react-three/fiber": "^8.18.0",
     "@react-three/postprocessing": "^2.19.1",
+    "clsx": "^2.1.1",
+    "embla-carousel-react": "^8.6.0",
     "framer-motion": "^11.0.0",
     "lucide-react": "^0.400.0",
     "ogl": "^1.0.11",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-router-dom": "^7.13.2",
+    "tailwind-merge": "^3.5.0",
     "three": "^0.160.1"
   },
   "devDependencies": {

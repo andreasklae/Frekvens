@@ -3,9 +3,8 @@ import type { Translations } from '../types';
 export const translations: Translations = {
   no: {
     nav: {
-      mission: 'Misjon',
       people: 'Folket',
-      roster: 'Artister',
+      events: 'Arrangementer',
       contact: 'Kontakt',
     },
     hero: {
@@ -24,10 +23,35 @@ export const translations: Translations = {
       title: 'VÅR ROSTER',
       subtitle: 'DJs og produsenter vi representerer',
     },
+    instagram: {
+      title: 'SISTE FRA INSTAGRAM',
+      subtitle: '@frekvenscollective',
+      viewOnInstagram: 'Se på Instagram',
+      openProfile: 'Følg @frekvenscollective',
+    },
     contact: {
       title: 'KONTAKT',
       email: 'Send oss en mail',
       followUs: 'Følg oss',
+    },
+    events: {
+      pageTitle: 'ARRANGEMENTER',
+      upcoming: 'Kommende',
+      past: 'Tidligere',
+      comingSoon: 'Flere arrangementer kommer snart.',
+      pastEmpty: 'Ingen tidligere arrangementer her ennå.',
+      galleryTitle: 'Galleri',
+      galleryGridTitle: 'Alle bilder',
+      galleryThumbnailShowInCarousel: 'Vis i hovedgalleriet',
+      galleryEmpty: 'Ingen flere bilder for dette arrangementet.',
+      watchYoutube: 'Se på YouTube',
+      ticketsRa: 'Billetter på Resident Advisor',
+      notFound: 'Fant ikke dette arrangementet.',
+      back: 'Tilbake til arrangementer',
+      eventPastBadge: 'Tidligere arrangement',
+      homeNextEvent: 'NESTE ARRANGEMENT',
+      homeLastEvent: 'SISTE ARRANGEMENT',
+      homeAllEvents: 'Alle arrangementer',
     },
     language: {
       toggle: 'Språk',
@@ -35,9 +59,8 @@ export const translations: Translations = {
   },
   en: {
     nav: {
-      mission: 'Mission',
       people: 'The People',
-      roster: 'Our Roster',
+      events: 'Events',
       contact: 'Contact',
     },
     hero: {
@@ -56,10 +79,35 @@ export const translations: Translations = {
       title: 'OUR ROSTER',
       subtitle: 'DJs and producers we represent',
     },
+    instagram: {
+      title: 'LATEST ON INSTAGRAM',
+      subtitle: '@frekvenscollective',
+      viewOnInstagram: 'View on Instagram',
+      openProfile: 'Follow @frekvenscollective',
+    },
     contact: {
       title: 'CONTACT',
       email: 'Send us an email',
       followUs: 'Follow us',
+    },
+    events: {
+      pageTitle: 'EVENTS',
+      upcoming: 'Upcoming',
+      past: 'Past',
+      comingSoon: 'More events coming soon.',
+      pastEmpty: 'No past events here yet.',
+      galleryTitle: 'Gallery',
+      galleryGridTitle: 'All photos',
+      galleryThumbnailShowInCarousel: 'Show in main gallery',
+      galleryEmpty: 'No more photos for this event.',
+      watchYoutube: 'Watch on YouTube',
+      ticketsRa: 'Tickets on Resident Advisor',
+      notFound: 'This event could not be found.',
+      back: 'Back to events',
+      eventPastBadge: 'Past event',
+      homeNextEvent: 'NEXT EVENT',
+      homeLastEvent: 'LAST EVENT',
+      homeAllEvents: 'All events',
     },
     language: {
       toggle: 'Language',

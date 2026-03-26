@@ -1,0 +1,54 @@
+{
+  "events": [
+    {
+      "slug": "frekvens-friends-prerelease",
+      "status": "past",
+      "title": {
+        "no": "FREKVENS & FRIENDS: OFFICIAL PRE-RELEASE",
+        "en": "FREKVENS & FRIENDS: OFFICIAL PRE-RELEASE"
+      },
+      "description": {
+        "no": "Offisiell førpremiere for å samle venner av Frekvens til en kveld med EDM!\n\nDato: Fredag 13. mars\nLokasjon: Furuset, Oslo\nTid: 21:00–03\nBYOB (bring your own booze)🍾 (ikke glass flasker)\n\nRegler!\n\n- Ha respekt for lokalet\n- Ha respekt for de rundt deg\n- Null toleranse for røyking innendørs\n\nBryter du disse vil du bli kastet ut",
+        "en": "Official pre-release night gathering friends of Frekvens for an evening of EDM.\n\nDate: Friday 13 March\nLocation: Furuset, Oslo\nTime: 21:00–03:00\nBYOB (bring your own booze) — no glass bottles.\n\nRules\n\n- Respect the venue\n- Respect those around you\n- Zero tolerance for smoking indoors\n\nBreaking these rules means you will be asked to leave."
+      },
+      "locationLine": {
+        "no": "Furuset, Oslo",
+        "en": "Furuset, Oslo"
+      },
+      "startDate": "2025-03-13T20:00:00+01:00",
+      "posterUrl": "/images/events/frekvens_00/poster.png",
+      "galleryBackgroundUrl": "/images/events/frekvens_00/background.jpg",
+      "galleryDir": "frekvens_00/gallery",
+      "galleryImageUrls": [
+        "/images/events/frekvens_00/gallery/DSCF9164.JPG",
+        "/images/events/frekvens_00/gallery/DSCF9176.JPG",
+        "/images/events/frekvens_00/gallery/Image%20(5).JPG",
+        "/images/events/frekvens_00/gallery/Image%20(6).JPG",
+        "/images/events/frekvens_00/gallery/Image%20(7).JPG",
+        "/images/events/frekvens_00/gallery/Image%20(8).JPG",
+        "/images/events/frekvens_00/gallery/Image%20(9).JPG",
+        "/images/events/frekvens_00/gallery/Image%20(10).JPG",
+        "/images/events/frekvens_00/gallery/Image%20(12).JPG",
+        "/images/events/frekvens_00/gallery/IMG_7860.JPG",
+        "/images/events/frekvens_00/gallery/test_frek-2.jpg",
+        "/images/events/frekvens_00/gallery/test_frek-3.jpg",
+        "/images/events/frekvens_00/gallery/test_frek-6.jpg",
+        "/images/events/frekvens_00/gallery/test_frek-7.jpg",
+        "/images/events/frekvens_00/gallery/test_frek-10.jpg",
+        "/images/events/frekvens_00/gallery/test_frek-15.jpg",
+        "/images/events/frekvens_00/gallery/test_frek-17.jpg",
+        "/images/events/frekvens_00/gallery/test_frek-19.jpg",
+        "/images/events/frekvens_00/gallery/test_frek-24.jpg",
+        "/images/events/frekvens_00/gallery/test_frek-25.jpg",
+        "/images/events/frekvens_00/gallery/test_frek-28.jpg",
+        "/images/events/frekvens_00/gallery/test_frek-30.jpg",
+        "/images/events/frekvens_00/gallery/test_frek.jpg"
+      ],
+      "youtubeUrl": "https://youtu.be/GNa_nNUQW58",
+      "ticketing": {
+        "kind": "partiful",
+        "url": "https://partiful.com/e/UKiCGH8SoDddcHXSC40w"
+      }
+    }
+  ]
+}

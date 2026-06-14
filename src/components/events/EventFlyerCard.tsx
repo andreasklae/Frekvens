@@ -1,16 +1,20 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import { CalendarClock, History } from 'lucide-react';
 import type { CollectiveEvent } from '../../types';
 import { useLanguage } from '../../context/LanguageContext';
+import { cn } from '../../lib/utils';
 
 interface EventFlyerCardProps {
   event: CollectiveEvent;
   index: number;
+  /** Show an "Upcoming"/"Past" tag overlay on the poster. */
+  showStatusBadge?: boolean;
 }
 
-export function EventFlyerCard({ event, index }: EventFlyerCardProps) {
-  const { language } = useLanguage();
+export function EventFlyerCard({ event, index, showStatusBadge = false }: EventFlyerCardProps) {
+  const { language, t } = useLanguage();
   const [posterFailed, setPosterFailed] = useState(false);
   const title = event.title[language];
   const staticSrc = event.posterUrl?.trim() || '';
@@ -26,12 +30,30 @@ export function EventFlyerCard({ event, index }: EventFlyerCardProps) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-40px' }}
       transition={{ duration: 0.45, delay: Math.min(index * 0.06, 0.35) }}
+      className="h-full"
     >
       <Link
         to={`/events/${event.slug}`}
-        className="group block rounded-xl border border-dark-600 bg-dark-900 overflow-hidden hover:border-primary/50 transition-all duration-300 hover:glow-border focus:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+        className="group flex h-full flex-col rounded-xl border border-dark-600 bg-dark-900 overflow-hidden hover:border-primary/50 transition-all duration-300 hover:glow-border focus:outline-none focus-visible:ring-2 focus-visible:ring-primary"
       >
-        <div className="relative aspect-[210/297] w-full bg-dark-800">
+        <div className="relative aspect-[210/297] w-full shrink-0 bg-dark-800">
+          {showStatusBadge && (
+            <span
+              className={cn(
+                'absolute left-2 top-2 z-10 inline-flex items-center gap-1 rounded-md border px-2 py-0.5 text-[10px] font-semibold uppercase tracking-[0.15em] shadow-sm',
+                event.status === 'upcoming'
+                  ? 'border-primary/60 bg-primary/90 text-white'
+                  : 'border-dark-600 bg-dark-900/85 text-gray-300'
+              )}
+            >
+              {event.status === 'upcoming' ? (
+                <CalendarClock className="h-3 w-3 shrink-0" aria-hidden />
+              ) : (
+                <History className="h-3 w-3 shrink-0" aria-hidden />
+              )}
+              {event.status === 'upcoming' ? t.events.upcoming : t.events.past}
+            </span>
+          )}
           {showPoster ? (
             <img
               src={staticSrc}
@@ -49,10 +71,16 @@ export function EventFlyerCard({ event, index }: EventFlyerCardProps) {
             </div>
           )}
         </div>
-        <div className="p-3 sm:p-4 border-t border-dark-600">
+        <div className="flex flex-1 flex-col p-3 sm:p-4 border-t border-dark-600">
           <h3 className="text-xs sm:text-sm font-semibold text-white group-hover:text-primary transition-colors line-clamp-3">
             {title}
           </h3>
+          {event.status === 'upcoming' && event.ticketing.kind === 'vipps' && (
+            <span className="mt-2 inline-flex items-center gap-1.5 text-[10px] font-semibold uppercase tracking-[0.15em] text-primary">
+              <span className="h-1.5 w-1.5 rounded-full bg-primary animate-pulse" aria-hidden />
+              {t.events.ticketSaleLive}
+            </span>
+          )}
         </div>
       </Link>
     </motion.div>

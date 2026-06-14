@@ -1,7 +1,7 @@
 export type Language = 'no' | 'en';
 
 export type CollectiveEventStatus = 'upcoming' | 'past';
-export type TicketingKind = 'partiful' | 'residentAdvisor';
+export type TicketingKind = 'partiful' | 'residentAdvisor' | 'vipps';
 
 export interface CollectiveEvent {
   slug: string;
@@ -22,7 +22,10 @@ export interface CollectiveEvent {
   /** Populated automatically when `galleryDir` is set; otherwise list URLs manually. */
   galleryImageUrls?: string[];
   youtubeUrl?: string | null;
-  ticketing: { kind: TicketingKind; url: string };
+  /** Optional co-host / collaborating collective shown as a link on the detail page. */
+  collaborator?: { name: string; url: string } | null;
+  /** `qrUrl` is shown alongside the ticket link for `vipps` (scan-to-pay). */
+  ticketing: { kind: TicketingKind; url: string; qrUrl?: string | null };
 }
 
 export interface Person {
@@ -57,6 +60,10 @@ export interface TranslationStrings {
   hero: {
     tagline: string;
     scroll: string;
+    /** CTA button label linking to the soonest upcoming event. */
+    nextEvent: string;
+    /** CTA button label linking to the most recent past event. */
+    lastEvent: string;
   };
   mission: {
     title: string;
@@ -95,14 +102,20 @@ export interface TranslationStrings {
     galleryEmpty: string;
     watchYoutube: string;
     ticketsRa: string;
+    /** Vipps ticket button label. */
+    ticketsVipps: string;
+    /** Caption under the Vipps QR code. */
+    vippsScan: string;
+    /** Badge shown near the title of an upcoming event with tickets on sale. */
+    ticketSaleLive: string;
+    /** Note explaining early-bird/limited capacity and door sales. */
+    ticketsNote: string;
+    /** Prefix before a collaborating collective's name/link. */
+    collaboratorPrefix: string;
     notFound: string;
     back: string;
     /** Shown on past event detail pages. */
     eventPastBadge: string;
-    /** Home: heading above the next upcoming event card. */
-    homeNextEvent: string;
-    /** Home: heading above the most recent past event card. */
-    homeLastEvent: string;
     /** Home: link to the full events listing. */
     homeAllEvents: string;
   };

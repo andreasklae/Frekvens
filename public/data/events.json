@@ -1,6 +1,37 @@
 {
   "events": [
     {
+      "slug": "frekvens-x-labyrinth",
+      "status": "upcoming",
+      "title": {
+        "no": "FREKVENS x LABYRINTH",
+        "en": "FREKVENS x LABYRINTH"
+      },
+      "description": {
+        "no": "Frekvens Collective går sammen med Labyrinth for en natt med techno og UKG midt i Oslo.\n\nDato: Lørdag 11. juli\nTid: 22:00–03:00\nSted: Labyrinth, Storgata 26, 0184 Oslo\nAlder: Strengt 20+\n\nEarly bird: spar 50 kr. Begrenset kapasitet.\nBilletter kjøpes via Vipps (#56342).\n\nLineup annonseres snart.",
+        "en": "Frekvens Collective teams up with Labyrinth for a night of techno and UKG in the heart of Oslo.\n\nDate: Saturday 11 July\nTime: 22:00–03:00\nVenue: Labyrinth, Storgata 26, 0184 Oslo\nAge: Strictly 20+\n\nEarly bird: save 50 NOK. Limited capacity.\nTickets via Vipps (#56342).\n\nLine-up to be announced."
+      },
+      "locationLine": {
+        "no": "Labyrinth, Storgata 26, 0184 Oslo",
+        "en": "Labyrinth, Storgata 26, 0184 Oslo"
+      },
+      "startDate": "2026-07-11T22:00:00+02:00",
+      "posterUrl": "/images/events/frekvens_01/poster.jpg",
+      "galleryBackgroundUrl": null,
+      "galleryDir": null,
+      "galleryImageUrls": [],
+      "youtubeUrl": null,
+      "collaborator": {
+        "name": "Labyrinth",
+        "url": "https://www.instagram.com/labyrinthoslo/"
+      },
+      "ticketing": {
+        "kind": "vipps",
+        "url": "https://qr.vipps.no/vp/4ShZ4aNcp",
+        "qrUrl": "/images/events/frekvens_01/qrcode.png"
+      }
+    },
+    {
       "slug": "frekvens-friends-prerelease",
       "status": "past",
       "title": {

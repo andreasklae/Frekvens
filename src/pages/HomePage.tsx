@@ -20,9 +20,9 @@ export function HomePage() {
   return (
     <>
       <Hero />
+      <HomeEventHighlights />
       <Mission />
       <InstagramFeed />
-      <HomeEventHighlights />
     </>
   );
 }

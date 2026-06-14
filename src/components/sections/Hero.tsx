@@ -1,13 +1,26 @@
+import { useMemo } from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { ChevronDown, Mail, Instagram } from 'lucide-react';
+import { ChevronDown, Mail, Instagram, ArrowRight } from 'lucide-react';
 import { useLanguage } from '../../context/LanguageContext';
+import { useEventsData } from '../../hooks/useEventsData';
+import { sortUpcoming, sortPast } from '../../utils/eventSort';
 import { Threads } from '../ui/Threads';
 
 export function Hero() {
   const { t } = useLanguage();
+  const { events } = useEventsData();
+
+  const featuredEvent = useMemo(() => {
+    const upcoming = events.filter((e) => e.status === 'upcoming').sort(sortUpcoming);
+    if (upcoming.length > 0) return { event: upcoming[0], label: t.hero.nextEvent };
+    const past = events.filter((e) => e.status === 'past').sort(sortPast);
+    if (past.length > 0) return { event: past[0], label: t.hero.lastEvent };
+    return null;
+  }, [events, t]);
 
   const scrollToMission = () => {
-    const element = document.querySelector('#mission');
+    const element = document.querySelector('#events') ?? document.querySelector('#mission');
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
@@ -60,7 +73,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: 'easeOut' }}
-          className="font-lastica text-[clamp(2rem,10.8vw,6rem)] sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl 2xl:text-[10rem] text-white glow-text tracking-normal sm:tracking-wide md:tracking-wider whitespace-nowrap text-center w-full overflow-hidden text-ellipsis"
+          className="font-lastica text-[clamp(2rem,10.8vw,6rem)] sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl 2xl:text-[10rem] text-white glow-text tracking-normal sm:tracking-wide md:tracking-wider whitespace-nowrap text-center w-full py-6"
         >
           FREKVENS
         </motion.h1>
@@ -100,6 +113,23 @@ export function Hero() {
             </motion.a>
           ))}
         </motion.div>
+
+        {featuredEvent && (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.9, ease: 'easeOut' }}
+            className="mt-6 sm:mt-8 flex justify-center"
+          >
+            <Link
+              to={`/events/${featuredEvent.event.slug}`}
+              className="group inline-flex items-center gap-2 rounded-lg border border-dark-600/50 bg-dark-900/50 px-5 py-3 text-sm font-medium uppercase tracking-widest text-gray-300 backdrop-blur-sm transition-all duration-300 hover:border-primary/50 hover:text-primary hover:glow-border"
+            >
+              {featuredEvent.label}
+              <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
+            </Link>
+          </motion.div>
+        )}
       </div>
 
       {/* Scroll indicator */}

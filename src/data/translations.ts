@@ -10,6 +10,8 @@ export const translations: Translations = {
     hero: {
       tagline: 'Oslo Underground Collective',
       scroll: 'Scroll ned',
+      nextEvent: 'Neste arrangement',
+      lastEvent: 'Forrige arrangement',
     },
     mission: {
       title: 'VÅR VISJON',
@@ -46,11 +48,14 @@ export const translations: Translations = {
       galleryEmpty: 'Ingen flere bilder for dette arrangementet.',
       watchYoutube: 'Se på YouTube',
       ticketsRa: 'Billetter på Resident Advisor',
+      ticketsVipps: 'Kjøp billetter med Vipps',
+      vippsScan: 'Skann for å betale med Vipps',
+      ticketSaleLive: 'Billettsalg åpent',
+      ticketsNote: 'Early bird-billetter med begrenset kapasitet. Resten selges i døra.',
+      collaboratorPrefix: 'I samarbeid med',
       notFound: 'Fant ikke dette arrangementet.',
       back: 'Tilbake til arrangementer',
       eventPastBadge: 'Tidligere arrangement',
-      homeNextEvent: 'NESTE ARRANGEMENT',
-      homeLastEvent: 'SISTE ARRANGEMENT',
       homeAllEvents: 'Alle arrangementer',
     },
     language: {
@@ -66,6 +71,8 @@ export const translations: Translations = {
     hero: {
       tagline: 'Oslo Underground Collective',
       scroll: 'Scroll down',
+      nextEvent: 'Next event',
+      lastEvent: 'Last event',
     },
     mission: {
       title: 'OUR MISSION',
@@ -102,11 +109,14 @@ export const translations: Translations = {
       galleryEmpty: 'No more photos for this event.',
       watchYoutube: 'Watch on YouTube',
       ticketsRa: 'Tickets on Resident Advisor',
+      ticketsVipps: 'Buy tickets with Vipps',
+      vippsScan: 'Scan to pay with Vipps',
+      ticketSaleLive: 'Ticket sale live',
+      ticketsNote: 'Early bird tickets with limited capacity. Remaining tickets sold at the door.',
+      collaboratorPrefix: 'In collaboration with',
       notFound: 'This event could not be found.',
       back: 'Back to events',
       eventPastBadge: 'Past event',
-      homeNextEvent: 'NEXT EVENT',
-      homeLastEvent: 'LAST EVENT',
       homeAllEvents: 'All events',
     },
     language: {

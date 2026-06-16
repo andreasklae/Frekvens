@@ -2,6 +2,7 @@ import type { Person } from '../types';
 
 const SPREADSHEET_ID = '1kwEoFWriKDDUtYmXiQ9L29g6kF4D48xkNzuXCk1gtxg';
 const GID = '0';
+const INSTAGRAM_PUBLISHED_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vShFqA_SRrxr-K6-n5K22SUnFTdjflBKKgwe4QqRRRUSJVov5eU6bNuoVLErI1w1MeOmJt9Iv9ob8wm/pub?output=csv&gid=523434640';
 
 /**
  * Fetches data from Google Sheets and converts it to Person array
@@ -292,6 +293,26 @@ function parseSocialLinks(socials: string): Person['links'] {
   }
   
   return links;
+}
+
+/**
+ * Fetches the latest Instagram post URL from the "Instagram" tab in the spreadsheet.
+ * The tab should have "post_url" as the header in A1 and the URL in A2.
+ */
+export async function fetchInstagramPostUrl(): Promise<string | null> {
+  const csvUrl = INSTAGRAM_PUBLISHED_URL;
+  try {
+    const response = await fetch(csvUrl, { mode: 'cors', credentials: 'omit' });
+    if (!response.ok) return null;
+    const text = await response.text();
+    const rows = text.trim().split(/\r?\n/).map(r => r.trim().replace(/^"|"$/g, ''));
+    // rows[0] = header ("post_url"), rows[1] = the URL
+    const url = rows[1];
+    if (url && url.startsWith('https://www.instagram.com/p/')) return url;
+    return null;
+  } catch {
+    return null;
+  }
 }
 
 /**

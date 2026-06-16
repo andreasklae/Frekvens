@@ -1,11 +1,11 @@
 import { motion } from 'framer-motion';
 import { Instagram } from 'lucide-react';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useLanguage } from '../../context/LanguageContext';
+import { fetchInstagramPostUrl } from '../../utils/googleSheets';
 
 const PROFILE_URL = 'https://www.instagram.com/frekvenscollective/';
-/** Canonical permalink for embed (query string not needed). */
-const EMBED_POST_URL = 'https://www.instagram.com/p/DWRni5JDHDE/';
+const FALLBACK_POST_URL = 'https://www.instagram.com/p/DWRni5JDHDE/';
 
 function processInstagramEmbeds() {
   const w = window as Window & { instgrm?: { Embeds: { process: () => void } } };
@@ -14,6 +14,13 @@ function processInstagramEmbeds() {
 
 export function InstagramFeed() {
   const { t } = useLanguage();
+  const [postUrl, setPostUrl] = useState<string | null>(null);
+
+  useEffect(() => {
+    fetchInstagramPostUrl().then(url => {
+      setPostUrl(url ?? FALLBACK_POST_URL);
+    });
+  }, []);
 
   useEffect(() => {
     const existing = document.querySelector<HTMLScriptElement>(
@@ -34,7 +41,7 @@ export function InstagramFeed() {
     return () => {
       script.onload = null;
     };
-  }, []);
+  }, [postUrl]);
 
   return (
     <section id="instagram" className="py-24 sm:py-32 bg-transparent relative overflow-hidden">
@@ -59,30 +66,32 @@ export function InstagramFeed() {
           viewport={{ once: true }}
           className="flex justify-center w-full"
         >
-          <blockquote
-            className="instagram-media"
-            data-instgrm-permalink={EMBED_POST_URL}
-            data-instgrm-version="14"
-            style={{
-              background: '#FFF',
-              border: 0,
-              borderRadius: 12,
-              margin: 0,
-              maxWidth: 540,
-              minWidth: 280,
-              padding: 0,
-              width: '100%',
-            }}
-          >
-            <a
-              href={EMBED_POST_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block p-4 text-center text-sm text-gray-600 no-underline"
+          {postUrl && (
+            <blockquote
+              className="instagram-media"
+              data-instgrm-permalink={postUrl}
+              data-instgrm-version="14"
+              style={{
+                background: '#FFF',
+                border: 0,
+                borderRadius: 12,
+                margin: 0,
+                maxWidth: 540,
+                minWidth: 280,
+                padding: 0,
+                width: '100%',
+              }}
             >
-              {t.instagram.viewOnInstagram}
-            </a>
-          </blockquote>
+              <a
+                href={postUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block p-4 text-center text-sm text-gray-600 no-underline"
+              >
+                {t.instagram.viewOnInstagram}
+              </a>
+            </blockquote>
+          )}
         </motion.div>
 
         <motion.div

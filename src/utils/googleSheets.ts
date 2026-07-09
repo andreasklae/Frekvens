@@ -308,7 +308,7 @@ export async function fetchInstagramPostUrl(): Promise<string | null> {
     const rows = text.trim().split(/\r?\n/).map(r => r.trim().replace(/^"|"$/g, ''));
     // rows[0] = header ("post_url"), rows[1] = the URL
     const url = rows[1];
-    if (url && url.startsWith('https://www.instagram.com/p/')) return url;
+    if (url && /^https:\/\/www\.instagram\.com\/(p|reel)\//.test(url)) return url;
     return null;
   } catch {
     return null;

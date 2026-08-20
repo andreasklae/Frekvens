@@ -1,4 +1,5 @@
 import { AspectRatio } from '@/components/ui/aspect-ratio';
+import { ResponsiveImage } from '@/components/ui/ResponsiveImage';
 
 type EventGalleryGridProps = {
   urls: string[];
@@ -39,8 +40,9 @@ export function EventGalleryGrid({
                 className="block h-full w-full cursor-pointer outline-none"
                 aria-label={`${thumbnailShowLabel} (${i + 1} / ${urls.length})`}
               >
-                <img
+                <ResponsiveImage
                   src={url}
+                  sizes="(min-width: 1024px) 25vw, (min-width: 640px) 33vw, 50vw"
                   alt=""
                   className="pointer-events-none h-full w-full object-cover"
                   loading="lazy"

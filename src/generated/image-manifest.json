@@ -1,0 +1,786 @@
+{
+  "/images/events/frekvens_00/background.jpg": {
+    "width": 1131,
+    "height": 1600,
+    "variants": [
+      {
+        "width": 320,
+        "url": "/images/_derived/events-frekvens-00-background-a9b428-320.webp"
+      },
+      {
+        "width": 640,
+        "url": "/images/_derived/events-frekvens-00-background-a9b428-640.webp"
+      },
+      {
+        "width": 960,
+        "url": "/images/_derived/events-frekvens-00-background-a9b428-960.webp"
+      },
+      {
+        "width": 1131,
+        "url": "/images/_derived/events-frekvens-00-background-a9b428-1131.webp"
+      }
+    ]
+  },
+  "/images/events/frekvens_00/gallery/DSCF9164.JPG": {
+    "width": 4896,
+    "height": 3264,
+    "variants": [
+      {
+        "width": 320,
+        "url": "/images/_derived/events-frekvens-00-gallery-dscf9164-c1e1af-320.webp"
+      },
+      {
+        "width": 640,
+        "url": "/images/_derived/events-frekvens-00-gallery-dscf9164-c1e1af-640.webp"
+      },
+      {
+        "width": 960,
+        "url": "/images/_derived/events-frekvens-00-gallery-dscf9164-c1e1af-960.webp"
+      },
+      {
+        "width": 1440,
+        "url": "/images/_derived/events-frekvens-00-gallery-dscf9164-c1e1af-1440.webp"
+      },
+      {
+        "width": 2048,
+        "url": "/images/_derived/events-frekvens-00-gallery-dscf9164-c1e1af-2048.webp"
+      }
+    ]
+  },
+  "/images/events/frekvens_00/gallery/DSCF9176.JPG": {
+    "width": 4896,
+    "height": 3264,
+    "variants": [
+      {
+        "width": 320,
+        "url": "/images/_derived/events-frekvens-00-gallery-dscf9176-a56bac-320.webp"
+      },
+      {
+        "width": 640,
+        "url": "/images/_derived/events-frekvens-00-gallery-dscf9176-a56bac-640.webp"
+      },
+      {
+        "width": 960,
+        "url": "/images/_derived/events-frekvens-00-gallery-dscf9176-a56bac-960.webp"
+      },
+      {
+        "width": 1440,
+        "url": "/images/_derived/events-frekvens-00-gallery-dscf9176-a56bac-1440.webp"
+      },
+      {
+        "width": 2048,
+        "url": "/images/_derived/events-frekvens-00-gallery-dscf9176-a56bac-2048.webp"
+      }
+    ]
+  },
+  "/images/events/frekvens_00/gallery/IMG_7860.JPG": {
+    "width": 4896,
+    "height": 3264,
+    "variants": [
+      {
+        "width": 320,
+        "url": "/images/_derived/events-frekvens-00-gallery-img-7860-48f07b-320.webp"
+      },
+      {
+        "width": 640,
+        "url": "/images/_derived/events-frekvens-00-gallery-img-7860-48f07b-640.webp"
+      },
+      {
+        "width": 960,
+        "url": "/images/_derived/events-frekvens-00-gallery-img-7860-48f07b-960.webp"
+      },
+      {
+        "width": 1440,
+        "url": "/images/_derived/events-frekvens-00-gallery-img-7860-48f07b-1440.webp"
+      },
+      {
+        "width": 2048,
+        "url": "/images/_derived/events-frekvens-00-gallery-img-7860-48f07b-2048.webp"
+      }
+    ]
+  },
+  "/images/events/frekvens_00/gallery/Image%20(10).JPG": {
+    "width": 1436,
+    "height": 931,
+    "variants": [
+      {
+        "width": 320,
+        "url": "/images/_derived/events-frekvens-00-gallery-image-10-0091a1-320.webp"
+      },
+      {
+        "width": 640,
+        "url": "/images/_derived/events-frekvens-00-gallery-image-10-0091a1-640.webp"
+      },
+      {
+        "width": 960,
+        "url": "/images/_derived/events-frekvens-00-gallery-image-10-0091a1-960.webp"
+      },
+      {
+        "width": 1436,
+        "url": "/images/_derived/events-frekvens-00-gallery-image-10-0091a1-1436.webp"
+      }
+    ]
+  },
+  "/images/events/frekvens_00/gallery/Image%20(12).JPG": {
+    "width": 1436,
+    "height": 931,
+    "variants": [
+      {
+        "width": 320,
+        "url": "/images/_derived/events-frekvens-00-gallery-image-12-f6ab28-320.webp"
+      },
+      {
+        "width": 640,
+        "url": "/images/_derived/events-frekvens-00-gallery-image-12-f6ab28-640.webp"
+      },
+      {
+        "width": 960,
+        "url": "/images/_derived/events-frekvens-00-gallery-image-12-f6ab28-960.webp"
+      },
+      {
+        "width": 1436,
+        "url": "/images/_derived/events-frekvens-00-gallery-image-12-f6ab28-1436.webp"
+      }
+    ]
+  },
+  "/images/events/frekvens_00/gallery/Image%20(5).JPG": {
+    "width": 931,
+    "height": 1436,
+    "variants": [
+      {
+        "width": 320,
+        "url": "/images/_derived/events-frekvens-00-gallery-image-5-59cc6c-320.webp"
+      },
+      {
+        "width": 640,
+        "url": "/images/_derived/events-frekvens-00-gallery-image-5-59cc6c-640.webp"
+      },
+      {
+        "width": 931,
+        "url": "/images/_derived/events-frekvens-00-gallery-image-5-59cc6c-931.webp"
+      }
+    ]
+  },
+  "/images/events/frekvens_00/gallery/Image%20(6).JPG": {
+    "width": 931,
+    "height": 1436,
+    "variants": [
+      {
+        "width": 320,
+        "url": "/images/_derived/events-frekvens-00-gallery-image-6-8bf951-320.webp"
+      },
+      {
+        "width": 640,
+        "url": "/images/_derived/events-frekvens-00-gallery-image-6-8bf951-640.webp"
+      },
+      {
+        "width": 931,
+        "url": "/images/_derived/events-frekvens-00-gallery-image-6-8bf951-931.webp"
+      }
+    ]
+  },
+  "/images/events/frekvens_00/gallery/Image%20(7).JPG": {
+    "width": 931,
+    "height": 1436,
+    "variants": [
+      {
+        "width": 320,
+        "url": "/images/_derived/events-frekvens-00-gallery-image-7-f01957-320.webp"
+      },
+      {
+        "width": 640,
+        "url": "/images/_derived/events-frekvens-00-gallery-image-7-f01957-640.webp"
+      },
+      {
+        "width": 931,
+        "url": "/images/_derived/events-frekvens-00-gallery-image-7-f01957-931.webp"
+      }
+    ]
+  },
+  "/images/events/frekvens_00/gallery/Image%20(8).JPG": {
+    "width": 1436,
+    "height": 931,
+    "variants": [
+      {
+        "width": 320,
+        "url": "/images/_derived/events-frekvens-00-gallery-image-8-a77290-320.webp"
+      },
+      {
+        "width": 640,
+        "url": "/images/_derived/events-frekvens-00-gallery-image-8-a77290-640.webp"
+      },
+      {
+        "width": 960,
+        "url": "/images/_derived/events-frekvens-00-gallery-image-8-a77290-960.webp"
+      },
+      {
+        "width": 1436,
+        "url": "/images/_derived/events-frekvens-00-gallery-image-8-a77290-1436.webp"
+      }
+    ]
+  },
+  "/images/events/frekvens_00/gallery/Image%20(9).JPG": {
+    "width": 1436,
+    "height": 931,
+    "variants": [
+      {
+        "width": 320,
+        "url": "/images/_derived/events-frekvens-00-gallery-image-9-56e77a-320.webp"
+      },
+      {
+        "width": 640,
+        "url": "/images/_derived/events-frekvens-00-gallery-image-9-56e77a-640.webp"
+      },
+      {
+        "width": 960,
+        "url": "/images/_derived/events-frekvens-00-gallery-image-9-56e77a-960.webp"
+      },
+      {
+        "width": 1436,
+        "url": "/images/_derived/events-frekvens-00-gallery-image-9-56e77a-1436.webp"
+      }
+    ]
+  },
+  "/images/events/frekvens_00/gallery/test_frek-10.jpg": {
+    "width": 4054,
+    "height": 5742,
+    "variants": [
+      {
+        "width": 320,
+        "url": "/images/_derived/events-frekvens-00-gallery-test-frek-10-bf43a7-320.webp"
+      },
+      {
+        "width": 640,
+        "url": "/images/_derived/events-frekvens-00-gallery-test-frek-10-bf43a7-640.webp"
+      },
+      {
+        "width": 960,
+        "url": "/images/_derived/events-frekvens-00-gallery-test-frek-10-bf43a7-960.webp"
+      },
+      {
+        "width": 1440,
+        "url": "/images/_derived/events-frekvens-00-gallery-test-frek-10-bf43a7-1440.webp"
+      },
+      {
+        "width": 2048,
+        "url": "/images/_derived/events-frekvens-00-gallery-test-frek-10-bf43a7-2048.webp"
+      }
+    ]
+  },
+  "/images/events/frekvens_00/gallery/test_frek-15.jpg": {
+    "width": 7952,
+    "height": 5304,
+    "variants": [
+      {
+        "width": 320,
+        "url": "/images/_derived/events-frekvens-00-gallery-test-frek-15-66ee30-320.webp"
+      },
+      {
+        "width": 640,
+        "url": "/images/_derived/events-frekvens-00-gallery-test-frek-15-66ee30-640.webp"
+      },
+      {
+        "width": 960,
+        "url": "/images/_derived/events-frekvens-00-gallery-test-frek-15-66ee30-960.webp"
+      },
+      {
+        "width": 1440,
+        "url": "/images/_derived/events-frekvens-00-gallery-test-frek-15-66ee30-1440.webp"
+      },
+      {
+        "width": 2048,
+        "url": "/images/_derived/events-frekvens-00-gallery-test-frek-15-66ee30-2048.webp"
+      }
+    ]
+  },
+  "/images/events/frekvens_00/gallery/test_frek-17.jpg": {
+    "width": 5304,
+    "height": 7952,
+    "variants": [
+      {
+        "width": 320,
+        "url": "/images/_derived/events-frekvens-00-gallery-test-frek-17-23da60-320.webp"
+      },
+      {
+        "width": 640,
+        "url": "/images/_derived/events-frekvens-00-gallery-test-frek-17-23da60-640.webp"
+      },
+      {
+        "width": 960,
+        "url": "/images/_derived/events-frekvens-00-gallery-test-frek-17-23da60-960.webp"
+      },
+      {
+        "width": 1440,
+        "url": "/images/_derived/events-frekvens-00-gallery-test-frek-17-23da60-1440.webp"
+      },
+      {
+        "width": 2048,
+        "url": "/images/_derived/events-frekvens-00-gallery-test-frek-17-23da60-2048.webp"
+      }
+    ]
+  },
+  "/images/events/frekvens_00/gallery/test_frek-19.jpg": {
+    "width": 5304,
+    "height": 7952,
+    "variants": [
+      {
+        "width": 320,
+        "url": "/images/_derived/events-frekvens-00-gallery-test-frek-19-5d1a7e-320.webp"
+      },
+      {
+        "width": 640,
+        "url": "/images/_derived/events-frekvens-00-gallery-test-frek-19-5d1a7e-640.webp"
+      },
+      {
+        "width": 960,
+        "url": "/images/_derived/events-frekvens-00-gallery-test-frek-19-5d1a7e-960.webp"
+      },
+      {
+        "width": 1440,
+        "url": "/images/_derived/events-frekvens-00-gallery-test-frek-19-5d1a7e-1440.webp"
+      },
+      {
+        "width": 2048,
+        "url": "/images/_derived/events-frekvens-00-gallery-test-frek-19-5d1a7e-2048.webp"
+      }
+    ]
+  },
+  "/images/events/frekvens_00/gallery/test_frek-2.jpg": {
+    "width": 5304,
+    "height": 7952,
+    "variants": [
+      {
+        "width": 320,
+        "url": "/images/_derived/events-frekvens-00-gallery-test-frek-2-a650fa-320.webp"
+      },
+      {
+        "width": 640,
+        "url": "/images/_derived/events-frekvens-00-gallery-test-frek-2-a650fa-640.webp"
+      },
+      {
+        "width": 960,
+        "url": "/images/_derived/events-frekvens-00-gallery-test-frek-2-a650fa-960.webp"
+      },
+      {
+        "width": 1440,
+        "url": "/images/_derived/events-frekvens-00-gallery-test-frek-2-a650fa-1440.webp"
+      },
+      {
+        "width": 2048,
+        "url": "/images/_derived/events-frekvens-00-gallery-test-frek-2-a650fa-2048.webp"
+      }
+    ]
+  },
+  "/images/events/frekvens_00/gallery/test_frek-24.jpg": {
+    "width": 7952,
+    "height": 5304,
+    "variants": [
+      {
+        "width": 320,
+        "url": "/images/_derived/events-frekvens-00-gallery-test-frek-24-501362-320.webp"
+      },
+      {
+        "width": 640,
+        "url": "/images/_derived/events-frekvens-00-gallery-test-frek-24-501362-640.webp"
+      },
+      {
+        "width": 960,
+        "url": "/images/_derived/events-frekvens-00-gallery-test-frek-24-501362-960.webp"
+      },
+      {
+        "width": 1440,
+        "url": "/images/_derived/events-frekvens-00-gallery-test-frek-24-501362-1440.webp"
+      },
+      {
+        "width": 2048,
+        "url": "/images/_derived/events-frekvens-00-gallery-test-frek-24-501362-2048.webp"
+      }
+    ]
+  },
+  "/images/events/frekvens_00/gallery/test_frek-25.jpg": {
+    "width": 7952,
+    "height": 5304,
+    "variants": [
+      {
+        "width": 320,
+        "url": "/images/_derived/events-frekvens-00-gallery-test-frek-25-4fb8be-320.webp"
+      },
+      {
+        "width": 640,
+        "url": "/images/_derived/events-frekvens-00-gallery-test-frek-25-4fb8be-640.webp"
+      },
+      {
+        "width": 960,
+        "url": "/images/_derived/events-frekvens-00-gallery-test-frek-25-4fb8be-960.webp"
+      },
+      {
+        "width": 1440,
+        "url": "/images/_derived/events-frekvens-00-gallery-test-frek-25-4fb8be-1440.webp"
+      },
+      {
+        "width": 2048,
+        "url": "/images/_derived/events-frekvens-00-gallery-test-frek-25-4fb8be-2048.webp"
+      }
+    ]
+  },
+  "/images/events/frekvens_00/gallery/test_frek-28.jpg": {
+    "width": 5304,
+    "height": 7952,
+    "variants": [
+      {
+        "width": 320,
+        "url": "/images/_derived/events-frekvens-00-gallery-test-frek-28-0aa7af-320.webp"
+      },
+      {
+        "width": 640,
+        "url": "/images/_derived/events-frekvens-00-gallery-test-frek-28-0aa7af-640.webp"
+      },
+      {
+        "width": 960,
+        "url": "/images/_derived/events-frekvens-00-gallery-test-frek-28-0aa7af-960.webp"
+      },
+      {
+        "width": 1440,
+        "url": "/images/_derived/events-frekvens-00-gallery-test-frek-28-0aa7af-1440.webp"
+      },
+      {
+        "width": 2048,
+        "url": "/images/_derived/events-frekvens-00-gallery-test-frek-28-0aa7af-2048.webp"
+      }
+    ]
+  },
+  "/images/events/frekvens_00/gallery/test_frek-3.jpg": {
+    "width": 5304,
+    "height": 7952,
+    "variants": [
+      {
+        "width": 320,
+        "url": "/images/_derived/events-frekvens-00-gallery-test-frek-3-9660a9-320.webp"
+      },
+      {
+        "width": 640,
+        "url": "/images/_derived/events-frekvens-00-gallery-test-frek-3-9660a9-640.webp"
+      },
+      {
+        "width": 960,
+        "url": "/images/_derived/events-frekvens-00-gallery-test-frek-3-9660a9-960.webp"
+      },
+      {
+        "width": 1440,
+        "url": "/images/_derived/events-frekvens-00-gallery-test-frek-3-9660a9-1440.webp"
+      },
+      {
+        "width": 2048,
+        "url": "/images/_derived/events-frekvens-00-gallery-test-frek-3-9660a9-2048.webp"
+      }
+    ]
+  },
+  "/images/events/frekvens_00/gallery/test_frek-30.jpg": {
+    "width": 7952,
+    "height": 5304,
+    "variants": [
+      {
+        "width": 320,
+        "url": "/images/_derived/events-frekvens-00-gallery-test-frek-30-cf9df0-320.webp"
+      },
+      {
+        "width": 640,
+        "url": "/images/_derived/events-frekvens-00-gallery-test-frek-30-cf9df0-640.webp"
+      },
+      {
+        "width": 960,
+        "url": "/images/_derived/events-frekvens-00-gallery-test-frek-30-cf9df0-960.webp"
+      },
+      {
+        "width": 1440,
+        "url": "/images/_derived/events-frekvens-00-gallery-test-frek-30-cf9df0-1440.webp"
+      },
+      {
+        "width": 2048,
+        "url": "/images/_derived/events-frekvens-00-gallery-test-frek-30-cf9df0-2048.webp"
+      }
+    ]
+  },
+  "/images/events/frekvens_00/gallery/test_frek-6.jpg": {
+    "width": 5304,
+    "height": 7952,
+    "variants": [
+      {
+        "width": 320,
+        "url": "/images/_derived/events-frekvens-00-gallery-test-frek-6-930faf-320.webp"
+      },
+      {
+        "width": 640,
+        "url": "/images/_derived/events-frekvens-00-gallery-test-frek-6-930faf-640.webp"
+      },
+      {
+        "width": 960,
+        "url": "/images/_derived/events-frekvens-00-gallery-test-frek-6-930faf-960.webp"
+      },
+      {
+        "width": 1440,
+        "url": "/images/_derived/events-frekvens-00-gallery-test-frek-6-930faf-1440.webp"
+      },
+      {
+        "width": 2048,
+        "url": "/images/_derived/events-frekvens-00-gallery-test-frek-6-930faf-2048.webp"
+      }
+    ]
+  },
+  "/images/events/frekvens_00/gallery/test_frek-7.jpg": {
+    "width": 5304,
+    "height": 7952,
+    "variants": [
+      {
+        "width": 320,
+        "url": "/images/_derived/events-frekvens-00-gallery-test-frek-7-f05c35-320.webp"
+      },
+      {
+        "width": 640,
+        "url": "/images/_derived/events-frekvens-00-gallery-test-frek-7-f05c35-640.webp"
+      },
+      {
+        "width": 960,
+        "url": "/images/_derived/events-frekvens-00-gallery-test-frek-7-f05c35-960.webp"
+      },
+      {
+        "width": 1440,
+        "url": "/images/_derived/events-frekvens-00-gallery-test-frek-7-f05c35-1440.webp"
+      },
+      {
+        "width": 2048,
+        "url": "/images/_derived/events-frekvens-00-gallery-test-frek-7-f05c35-2048.webp"
+      }
+    ]
+  },
+  "/images/events/frekvens_00/gallery/test_frek.jpg": {
+    "width": 5304,
+    "height": 7952,
+    "variants": [
+      {
+        "width": 320,
+        "url": "/images/_derived/events-frekvens-00-gallery-test-frek-d04ace-320.webp"
+      },
+      {
+        "width": 640,
+        "url": "/images/_derived/events-frekvens-00-gallery-test-frek-d04ace-640.webp"
+      },
+      {
+        "width": 960,
+        "url": "/images/_derived/events-frekvens-00-gallery-test-frek-d04ace-960.webp"
+      },
+      {
+        "width": 1440,
+        "url": "/images/_derived/events-frekvens-00-gallery-test-frek-d04ace-1440.webp"
+      },
+      {
+        "width": 2048,
+        "url": "/images/_derived/events-frekvens-00-gallery-test-frek-d04ace-2048.webp"
+      }
+    ]
+  },
+  "/images/events/frekvens_00/poster.png": {
+    "width": 920,
+    "height": 1301,
+    "variants": [
+      {
+        "width": 320,
+        "url": "/images/_derived/events-frekvens-00-poster-04e8d5-320.webp"
+      },
+      {
+        "width": 640,
+        "url": "/images/_derived/events-frekvens-00-poster-04e8d5-640.webp"
+      },
+      {
+        "width": 920,
+        "url": "/images/_derived/events-frekvens-00-poster-04e8d5-920.webp"
+      }
+    ]
+  },
+  "/images/events/frekvens_01/poster-v2.jpeg": {
+    "width": 1320,
+    "height": 1682,
+    "variants": [
+      {
+        "width": 320,
+        "url": "/images/_derived/events-frekvens-01-poster-v2-0b267e-320.webp"
+      },
+      {
+        "width": 640,
+        "url": "/images/_derived/events-frekvens-01-poster-v2-0b267e-640.webp"
+      },
+      {
+        "width": 960,
+        "url": "/images/_derived/events-frekvens-01-poster-v2-0b267e-960.webp"
+      },
+      {
+        "width": 1320,
+        "url": "/images/_derived/events-frekvens-01-poster-v2-0b267e-1320.webp"
+      }
+    ]
+  },
+  "/images/events/frekvens_01/poster.jpg": {
+    "width": 1842,
+    "height": 2568,
+    "variants": [
+      {
+        "width": 320,
+        "url": "/images/_derived/events-frekvens-01-poster-543c15-320.webp"
+      },
+      {
+        "width": 640,
+        "url": "/images/_derived/events-frekvens-01-poster-543c15-640.webp"
+      },
+      {
+        "width": 960,
+        "url": "/images/_derived/events-frekvens-01-poster-543c15-960.webp"
+      },
+      {
+        "width": 1440,
+        "url": "/images/_derived/events-frekvens-01-poster-543c15-1440.webp"
+      },
+      {
+        "width": 1842,
+        "url": "/images/_derived/events-frekvens-01-poster-543c15-1842.webp"
+      }
+    ]
+  },
+  "/images/events/frekvens_01/qrcode.png": {
+    "width": 800,
+    "height": 800,
+    "variants": [
+      {
+        "width": 320,
+        "url": "/images/_derived/events-frekvens-01-qrcode-9fabfc-320.webp"
+      },
+      {
+        "width": 640,
+        "url": "/images/_derived/events-frekvens-01-qrcode-9fabfc-640.webp"
+      },
+      {
+        "width": 800,
+        "url": "/images/_derived/events-frekvens-01-qrcode-9fabfc-800.webp"
+      }
+    ]
+  },
+  "/images/partiful-logo.png": {
+    "width": 400,
+    "height": 400,
+    "variants": [
+      {
+        "width": 320,
+        "url": "/images/_derived/partiful-logo-11ec89-320.webp"
+      },
+      {
+        "width": 400,
+        "url": "/images/_derived/partiful-logo-11ec89-400.webp"
+      }
+    ]
+  },
+  "/images/people/andreas.jpg": {
+    "width": 3728,
+    "height": 3728,
+    "variants": [
+      {
+        "width": 320,
+        "url": "/images/_derived/people-andreas-6e4e9a-320.webp"
+      },
+      {
+        "width": 640,
+        "url": "/images/_derived/people-andreas-6e4e9a-640.webp"
+      },
+      {
+        "width": 960,
+        "url": "/images/_derived/people-andreas-6e4e9a-960.webp"
+      },
+      {
+        "width": 1440,
+        "url": "/images/_derived/people-andreas-6e4e9a-1440.webp"
+      },
+      {
+        "width": 2048,
+        "url": "/images/_derived/people-andreas-6e4e9a-2048.webp"
+      }
+    ]
+  },
+  "/images/people/christian.jpeg": {
+    "width": 1094,
+    "height": 1467,
+    "variants": [
+      {
+        "width": 320,
+        "url": "/images/_derived/people-christian-9e6884-320.webp"
+      },
+      {
+        "width": 640,
+        "url": "/images/_derived/people-christian-9e6884-640.webp"
+      },
+      {
+        "width": 960,
+        "url": "/images/_derived/people-christian-9e6884-960.webp"
+      },
+      {
+        "width": 1094,
+        "url": "/images/_derived/people-christian-9e6884-1094.webp"
+      }
+    ]
+  },
+  "/images/people/michelle.jpeg": {
+    "width": 736,
+    "height": 753,
+    "variants": [
+      {
+        "width": 320,
+        "url": "/images/_derived/people-michelle-4b2d12-320.webp"
+      },
+      {
+        "width": 640,
+        "url": "/images/_derived/people-michelle-4b2d12-640.webp"
+      },
+      {
+        "width": 736,
+        "url": "/images/_derived/people-michelle-4b2d12-736.webp"
+      }
+    ]
+  },
+  "/images/people/nick.jpeg": {
+    "width": 874,
+    "height": 864,
+    "variants": [
+      {
+        "width": 320,
+        "url": "/images/_derived/people-nick-4b970b-320.webp"
+      },
+      {
+        "width": 640,
+        "url": "/images/_derived/people-nick-4b970b-640.webp"
+      },
+      {
+        "width": 874,
+        "url": "/images/_derived/people-nick-4b970b-874.webp"
+      }
+    ]
+  },
+  "/images/people/sindre.jpeg": {
+    "width": 1044,
+    "height": 1044,
+    "variants": [
+      {
+        "width": 320,
+        "url": "/images/_derived/people-sindre-bffc20-320.webp"
+      },
+      {
+        "width": 640,
+        "url": "/images/_derived/people-sindre-bffc20-640.webp"
+      },
+      {
+        "width": 960,
+        "url": "/images/_derived/people-sindre-bffc20-960.webp"
+      },
+      {
+        "width": 1044,
+        "url": "/images/_derived/people-sindre-bffc20-1044.webp"
+      }
+    ]
+  }
+}

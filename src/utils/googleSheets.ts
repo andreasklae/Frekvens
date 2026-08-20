@@ -322,6 +322,9 @@ export async function fetchInstagramPostUrl(): Promise<string | null> {
  * - Google Drive shareable links (converts to direct image URL)
  * - Falls back to local image path if no URL found
  */
+/** Roster avatars render at 80–128 css px; 400 covers retina with headroom. */
+const DRIVE_THUMBNAIL_WIDTH = 400;
+
 function extractImageUrlFromBilde(bilde: string): string | null {
   if (!bilde) {
     // No image provided
@@ -342,15 +345,23 @@ function extractImageUrlFromBilde(bilde: string): string | null {
       const fileIdMatch = url.match(/\/d\/([a-zA-Z0-9_-]+)|[?&]id=([a-zA-Z0-9_-]+)/);
       if (fileIdMatch) {
         const fileId = fileIdMatch[1] || fileIdMatch[2];
-        // Convert to direct image URL (thumbnail format, can be resized)
-        // Using sz parameter: w1000 = width 1000px, or w1920 for full size
-        url = `https://drive.google.com/thumbnail?id=${fileId}&sz=w1920`;
+        // Convert to direct image URL (thumbnail format, resized by the `sz` param).
+        // Roster photos only ever render as ~128px avatars, so ask Drive for a small
+        // thumbnail — w1920 meant every card downloaded a full-size photo.
+        url = `https://drive.google.com/thumbnail?id=${fileId}&sz=w${DRIVE_THUMBNAIL_WIDTH}`;
         console.log(`Converted Google Drive link to direct image URL: ${url}`);
       }
     }
     
-    // If it's already a direct image URL (jpg, png, webp, etc.) or Google Drive thumbnail, use it
-    if (url.match(/\.(jpg|jpeg|png|gif|webp|svg)(\?|$)/i) || url.includes('drive.google.com/thumbnail') || url.includes('googleusercontent.com')) {
+    // Shrink oversized `sz` values on thumbnail links pasted straight into the sheet.
+    if (url.includes('drive.google.com/thumbnail')) {
+      url = url.replace(/([?&])sz=w\d+/i, `$1sz=w${DRIVE_THUMBNAIL_WIDTH}`);
+      if (!/[?&]sz=/i.test(url)) url += `&sz=w${DRIVE_THUMBNAIL_WIDTH}`;
+      return url;
+    }
+
+    // If it's already a direct image URL (jpg, png, webp, etc.), use it
+    if (url.match(/\.(jpg|jpeg|png|gif|webp|svg)(\?|$)/i) || url.includes('googleusercontent.com')) {
       return url;
     }
     

@@ -7,6 +7,7 @@ import {
   CarouselPrevious,
   type CarouselApi,
 } from '@/components/ui/carousel';
+import { ResponsiveImage, fullSizeImageUrl } from '@/components/ui/ResponsiveImage';
 
 type EventGalleryCarouselProps = {
   urls: string[];
@@ -50,8 +51,9 @@ export function EventGalleryCarousel({ urls, backdropUrl, onApiChange }: EventGa
     <div className="mb-6">
       <div className="relative mx-auto aspect-square w-full max-w-3xl overflow-hidden rounded-xl border border-dark-600 shadow-inner">
         {backdropUrl ? (
-          <img
+          <ResponsiveImage
             src={backdropUrl}
+            sizes="(min-width: 768px) 768px, 100vw"
             alt=""
             className="pointer-events-none absolute inset-0 z-0 h-full w-full object-cover"
             loading="eager"
@@ -78,13 +80,14 @@ export function EventGalleryCarousel({ urls, backdropUrl, onApiChange }: EventGa
             {urls.map((url, i) => (
               <CarouselItem key={`${url}-${i}`} className="h-full basis-full pl-0 sm:pl-0">
                 <a
-                  href={url}
+                  href={fullSizeImageUrl(url)}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex h-full w-full items-center justify-center p-4 sm:p-6 outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-dark-900"
                 >
-                  <img
+                  <ResponsiveImage
                     src={url}
+                    sizes="(min-width: 768px) 768px, 100vw"
                     alt=""
                     className="max-h-full max-w-full object-contain drop-shadow-[0_8px_32px_rgba(0,0,0,0.65)]"
                     loading={i === 0 ? 'eager' : 'lazy'}

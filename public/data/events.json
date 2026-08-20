@@ -2,7 +2,6 @@
   "events": [
     {
       "slug": "frekvens-x-labyrinth",
-      "status": "upcoming",
       "title": {
         "no": "FREKVENS x LABYRINTH",
         "en": "FREKVENS x LABYRINTH"
@@ -33,7 +32,6 @@
     },
     {
       "slug": "frekvens-friends-prerelease",
-      "status": "past",
       "title": {
         "no": "FREKVENS & FRIENDS: OFFICIAL PRE-RELEASE",
         "en": "FREKVENS & FRIENDS: OFFICIAL PRE-RELEASE"

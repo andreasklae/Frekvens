@@ -5,6 +5,8 @@ import { CalendarClock, History } from 'lucide-react';
 import type { CollectiveEvent } from '../../types';
 import { useLanguage } from '../../context/LanguageContext';
 import { cn } from '../../lib/utils';
+import { ResponsiveImage } from '../ui/ResponsiveImage';
+import { hasLiveTicketing, isUpcomingEvent } from '../../utils/eventStatus';
 
 interface EventFlyerCardProps {
   event: CollectiveEvent;
@@ -18,6 +20,8 @@ export function EventFlyerCard({ event, index, showStatusBadge = false }: EventF
   const [posterFailed, setPosterFailed] = useState(false);
   const title = event.title[language];
   const staticSrc = event.posterUrl?.trim() || '';
+  const isUpcoming = isUpcomingEvent(event);
+  const ticketsLive = hasLiveTicketing(event);
   const showPoster = staticSrc.length > 0 && !posterFailed;
 
   useEffect(() => {
@@ -41,22 +45,23 @@ export function EventFlyerCard({ event, index, showStatusBadge = false }: EventF
             <span
               className={cn(
                 'absolute left-2 top-2 z-10 inline-flex items-center gap-1 rounded-md border px-2 py-0.5 text-[10px] font-semibold uppercase tracking-[0.15em] shadow-sm',
-                event.status === 'upcoming'
+                isUpcoming
                   ? 'border-primary/60 bg-primary/90 text-white'
                   : 'border-dark-600 bg-dark-900/85 text-gray-300'
               )}
             >
-              {event.status === 'upcoming' ? (
+              {isUpcoming ? (
                 <CalendarClock className="h-3 w-3 shrink-0" aria-hidden />
               ) : (
                 <History className="h-3 w-3 shrink-0" aria-hidden />
               )}
-              {event.status === 'upcoming' ? t.events.upcoming : t.events.past}
+              {isUpcoming ? t.events.upcoming : t.events.past}
             </span>
           )}
           {showPoster ? (
-            <img
+            <ResponsiveImage
               src={staticSrc}
+              sizes="(min-width: 1024px) 300px, (min-width: 640px) 33vw, 50vw"
               alt=""
               className="absolute inset-0 w-full h-full object-cover"
               loading="lazy"
@@ -75,7 +80,7 @@ export function EventFlyerCard({ event, index, showStatusBadge = false }: EventF
           <h3 className="text-xs sm:text-sm font-semibold text-white group-hover:text-primary transition-colors line-clamp-3">
             {title}
           </h3>
-          {event.status === 'upcoming' && event.ticketing.kind === 'vipps' && (
+          {ticketsLive && event.ticketing.kind === 'vipps' && (
             <span className="mt-2 inline-flex items-center gap-1.5 text-[10px] font-semibold uppercase tracking-[0.15em] text-primary">
               <span className="h-1.5 w-1.5 rounded-full bg-primary animate-pulse" aria-hidden />
               {t.events.ticketSaleLive}

@@ -105,9 +105,27 @@ Core types in [src/types/index.ts](src/types/index.ts):
 - `TranslationStrings` - UI translation structure
 - `Translations` - Map of Language to TranslationStrings
 
+## Images
+
+Source images in `public/images/` are full-resolution originals and must **never** be
+referenced directly by a component. `scripts/optimize-images.mjs` (runs before `dev`
+and `build`) generates WebP derivatives in `public/images/_derived/` plus
+`src/generated/image-manifest.json`; components render them through
+`<ResponsiveImage src="/images/..." sizes="..." />`, which builds the `srcset`.
+
+- Add a new photo → drop it in `public/images/`, run `npm run optimize-images`, commit
+  the original, the derivatives and the manifest.
+- Always pass a realistic `sizes` — it decides which variant the browser downloads.
+- `scripts/prune-dist-images.mjs` strips originals over 500 KB from `dist/` after the
+  build, so anything larger than that must go through `ResponsiveImage`.
+- Roster photos come from Google Drive; `googleSheets.ts` requests them at
+  `sz=w400` to match the avatar size.
+
 ## Scripts
 
 - `scripts/fetch-instagram-profiles.js` - Utility for fetching Instagram profile data
+- `scripts/optimize-images.mjs` - Generates responsive WebP derivatives + manifest
+- `scripts/prune-dist-images.mjs` - Drops heavy originals from `dist/` after build
 
 ## GitHub Pages Deployment
 

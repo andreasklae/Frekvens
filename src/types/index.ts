@@ -5,11 +5,17 @@ export type TicketingKind = 'partiful' | 'residentAdvisor' | 'vipps';
 
 export interface CollectiveEvent {
   slug: string;
-  status: CollectiveEventStatus;
+  /**
+   * Optional manual override. Normally omitted — the status is derived from the
+   * dates by `getEventStatus()` in `src/utils/eventStatus.ts`.
+   */
+  status?: CollectiveEventStatus;
   title: { no: string; en: string };
   description: { no: string; en: string };
   locationLine: { no: string; en: string };
   startDate: string;
+  /** Optional end time. Defaults to `startDate` + 8h when deciding upcoming vs past. */
+  endDate?: string | null;
   /** Path under `public/` (e.g. `/images/events/my-event/poster.jpg`) or any image URL. */
   posterUrl?: string | null;
   /** Optional carousel backdrop; if unset, the poster is used behind gallery slides. */

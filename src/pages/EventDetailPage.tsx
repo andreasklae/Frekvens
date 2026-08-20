@@ -9,6 +9,8 @@ import { ResidentAdvisorMark } from '../components/ui/ResidentAdvisorMark';
 import { EventGallerySection } from '../components/events/EventGallerySection';
 import { EventIconWhen, EventIconWhere } from '../components/events/EventDetailMetaIcons';
 import { formatEventDateTime } from '../utils/formatEventDate';
+import { hasLiveTicketing, isPastEvent } from '../utils/eventStatus';
+import { ResponsiveImage } from '../components/ui/ResponsiveImage';
 
 export function EventDetailPage() {
   const { slug } = useParams<{ slug: string }>();
@@ -62,6 +64,16 @@ export function EventDetailPage() {
     );
   }
 
+  const isPast = isPastEvent(event);
+  // Ticket links, the QR code and the sale badge are hidden once the event is over.
+  const ticketsLive = hasLiveTicketing(event);
+  const showVippsTickets = ticketsLive && event.ticketing.kind === 'vipps';
+  const showExternalTicketLink =
+    ticketsLive &&
+    (event.ticketing.kind === 'partiful' || event.ticketing.kind === 'residentAdvisor');
+  const youtubeHref = event.youtubeUrl?.trim() ?? '';
+  const showYoutubeLink = Boolean(youtubeHref && embedUrl);
+
   const title = event.title[language];
   const description = event.description[language];
   const locationLine = event.locationLine[language];
@@ -71,11 +83,13 @@ export function EventDetailPage() {
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 sm:pt-24">
         <div className="mb-8 sm:mb-10">
           {showPoster ? (
-            <img
+            <ResponsiveImage
               src={posterSrc}
+              sizes="(min-width: 768px) 768px, 100vw"
               alt=""
               className="mx-auto block h-auto w-full max-w-3xl max-h-[min(72vh,640px)] object-contain"
               loading="eager"
+              decoding="async"
               onError={() => setPosterFailed(true)}
             />
           ) : (
@@ -92,13 +106,13 @@ export function EventDetailPage() {
           className="mb-8"
         >
           <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-3">{title}</h1>
-          {event.status === 'past' ? (
+          {isPast ? (
             <p className="mb-3">
               <span className="inline-block rounded-md border border-dark-600 bg-dark-800/90 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.18em] text-gray-500">
                 {t.events.eventPastBadge}
               </span>
             </p>
-          ) : event.ticketing.kind === 'vipps' ? (
+          ) : showVippsTickets ? (
             <p className="mb-3">
               <span className="inline-flex items-center gap-2 rounded-md border border-primary/60 bg-primary/15 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.18em] text-primary">
                 <span className="h-1.5 w-1.5 rounded-full bg-primary animate-pulse" aria-hidden />
@@ -130,18 +144,20 @@ export function EventDetailPage() {
             </p>
           )}
 
-          {event.ticketing.kind === 'vipps' && (
+          {showVippsTickets && (
             <div className="mt-6 flex flex-col items-center gap-4 sm:items-start">
               <p className="max-w-md text-sm text-gray-400 leading-relaxed text-center sm:text-left">
                 {t.events.ticketsNote}
               </p>
               {event.ticketing.qrUrl?.trim() && (
                 <div className="flex flex-col items-center gap-2">
+                  {/* Kept as the original PNG: a lossy re-encode risks the code not scanning. */}
                   <img
                     src={event.ticketing.qrUrl.trim()}
                     alt=""
                     className="h-44 w-44 rounded-xl bg-white p-2.5"
                     loading="lazy"
+                    decoding="async"
                   />
                   <p className="text-xs text-gray-500">{t.events.vippsScan}</p>
                 </div>
@@ -168,14 +184,14 @@ export function EventDetailPage() {
           <p className="text-gray-300 whitespace-pre-line leading-relaxed">{description}</p>
         </motion.div>
 
-        {(event.ticketing.kind !== 'vipps' || (event.youtubeUrl && embedUrl)) && (
+        {(showExternalTicketLink || showYoutubeLink) && (
           <motion.div
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4, delay: 0.1 }}
             className="flex flex-wrap items-center gap-4 mb-12"
           >
-            {event.ticketing.kind === 'partiful' ? (
+            {showExternalTicketLink && event.ticketing.kind === 'partiful' ? (
               <a
                 href={event.ticketing.url}
                 target="_blank"
@@ -188,7 +204,7 @@ export function EventDetailPage() {
                   className="h-10 sm:h-12 w-auto max-w-[200px] object-contain"
                 />
               </a>
-            ) : event.ticketing.kind === 'residentAdvisor' ? (
+            ) : showExternalTicketLink && event.ticketing.kind === 'residentAdvisor' ? (
               <a
                 href={event.ticketing.url}
                 target="_blank"
@@ -201,9 +217,9 @@ export function EventDetailPage() {
               </a>
             ) : null}
 
-            {event.youtubeUrl && embedUrl && (
+            {showYoutubeLink && (
               <a
-                href={event.youtubeUrl}
+                href={youtubeHref}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 text-sm text-gray-400 hover:text-primary transition-colors"

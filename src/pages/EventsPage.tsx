@@ -3,13 +3,14 @@ import { useLanguage } from '../context/LanguageContext';
 import { useEventsData } from '../hooks/useEventsData';
 import { EventFlyerCard } from '../components/events/EventFlyerCard';
 import { sortPast, sortUpcoming } from '../utils/eventSort';
+import { isPastEvent, isUpcomingEvent } from '../utils/eventStatus';
 
 export function EventsPage() {
   const { t } = useLanguage();
   const { events, loading } = useEventsData();
 
-  const upcoming = events.filter((e) => e.status === 'upcoming').sort(sortUpcoming);
-  const past = events.filter((e) => e.status === 'past').sort(sortPast);
+  const upcoming = events.filter((e) => isUpcomingEvent(e)).sort(sortUpcoming);
+  const past = events.filter((e) => isPastEvent(e)).sort(sortPast);
 
   return (
     <div className="py-24 sm:py-32 pt-28 sm:pt-32">

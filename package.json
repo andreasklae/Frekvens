@@ -5,11 +5,12 @@
   "type": "module",
   "scripts": {
     "sync-gallery": "node scripts/sync-event-gallery.mjs",
-    "dev": "npm run sync-gallery && vite",
-    "build": "npm run sync-gallery && tsc -b && vite build && cp dist/index.html dist/404.html",
+    "dev": "npm run sync-gallery && npm run optimize-images && vite",
+    "build": "npm run sync-gallery && npm run optimize-images && tsc -b && vite build && node scripts/prune-dist-images.mjs && cp dist/index.html dist/404.html",
     "lint": "eslint .",
     "preview": "vite preview",
-    "fetch-instagram": "node scripts/fetch-instagram-feed.mjs"
+    "fetch-instagram": "node scripts/fetch-instagram-feed.mjs",
+    "optimize-images": "node scripts/optimize-images.mjs"
   },
   "dependencies": {
     "@radix-ui/react-aspect-ratio": "^1.1.8",
@@ -39,6 +40,7 @@
     "globals": "^15.9.0",
     "postcss": "^8.4.41",
     "shadcn": "^4.1.0",
+    "sharp": "^0.35.3",
     "tailwindcss": "^3.4.10",
     "typescript": "^5.5.3",
     "typescript-eslint": "^8.0.1",

@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Instagram, Music, User } from 'lucide-react';
 import type { Person } from '../../types';
 import { useLanguage } from '../../context/LanguageContext';
+import { ResponsiveImage } from './ResponsiveImage';
 
 interface PersonCardProps {
   person: Person;
@@ -40,9 +41,12 @@ export function PersonCard({ person }: PersonCardProps) {
                   <User className="w-10 h-10 sm:w-16 sm:h-16 text-dark-600" />
                 </div>
               )}
-              <img
+              <ResponsiveImage
                 src={person.imageUrl}
+                sizes="(min-width: 640px) 128px, 80px"
                 alt={person.alias || person.name || 'Person'}
+                loading="lazy"
+                decoding="async"
                 onError={handleImageError}
                 onLoad={handleImageLoad}
                 className={`w-20 h-20 sm:w-32 sm:h-32 rounded-full object-cover border-2 border-dark-600 transition-colors duration-300 ${

@@ -6,6 +6,7 @@ import { useEventsData } from '../../hooks/useEventsData';
 import { cn } from '../../lib/utils';
 import { EventFlyerCard } from '../events/EventFlyerCard';
 import { sortPast, sortUpcoming } from '../../utils/eventSort';
+import { isPastEvent, isUpcomingEvent } from '../../utils/eventStatus';
 
 /** Matches `Button` default variant — use on `Link` for navigation CTAs. */
 const allEventsCtaClassName = cn(
@@ -50,8 +51,8 @@ export function HomeEventHighlights() {
     return null;
   }
 
-  const upcoming = events.filter((e) => e.status === 'upcoming').sort(sortUpcoming);
-  const past = events.filter((e) => e.status === 'past').sort(sortPast);
+  const upcoming = events.filter((e) => isUpcomingEvent(e)).sort(sortUpcoming);
+  const past = events.filter((e) => isPastEvent(e)).sort(sortPast);
   // Upcoming events first, then the most recent past event as a highlight.
   const highlights = [...upcoming, ...past.slice(0, 1)];
 

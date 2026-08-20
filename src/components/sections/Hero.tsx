@@ -5,6 +5,7 @@ import { ChevronDown, Mail, Instagram, ArrowRight } from 'lucide-react';
 import { useLanguage } from '../../context/LanguageContext';
 import { useEventsData } from '../../hooks/useEventsData';
 import { sortUpcoming, sortPast } from '../../utils/eventSort';
+import { isPastEvent, isUpcomingEvent } from '../../utils/eventStatus';
 import { Threads } from '../ui/Threads';
 
 export function Hero() {
@@ -12,9 +13,9 @@ export function Hero() {
   const { events } = useEventsData();
 
   const featuredEvent = useMemo(() => {
-    const upcoming = events.filter((e) => e.status === 'upcoming').sort(sortUpcoming);
+    const upcoming = events.filter((e) => isUpcomingEvent(e)).sort(sortUpcoming);
     if (upcoming.length > 0) return { event: upcoming[0], label: t.hero.nextEvent };
-    const past = events.filter((e) => e.status === 'past').sort(sortPast);
+    const past = events.filter((e) => isPastEvent(e)).sort(sortPast);
     if (past.length > 0) return { event: past[0], label: t.hero.lastEvent };
     return null;
   }, [events, t]);
